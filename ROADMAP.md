@@ -16,6 +16,9 @@
 - levantamento (ontologia tb?) do DO: que tipos de publicações, que
   campos contém, o que deve haver, etc.
 
+- levantamento dos usuários de DO para ver o que eles precisam
+  (@wramalho)
+
 - adequação das leis de Mesquita ao 
 [lexML](http://projeto.lexml.gov.br/) [schema](http://projeto.lexml.gov.br/documentacao/Parte-3-XML-Schema.pdf)
 
@@ -31,17 +34,20 @@
 		e uma git (hash) tree
 
 - adaptar DTD e lexML ao DO
+	
+	- pensar em todos os DOs (escalabilidade); não adianta servir só
+      pra Mesquita
 
-	- DOs em XML no mundo:
+	- DOs em XML no mundo: (@wramalho)
 	  [federal register](https://www.federalregister.gov/reader-aids/developer-resources)
-	  [EUR-Lex](http://eur-lex.europa.eu/content/help/faq/intro.html#top) []() 
+	  [EUR-Lex](http://eur-lex.europa.eu/content/help/faq/intro.html#top)
 
 
 ## execução
 
 - documentar tudo no github, de código e metas às atas de reuniões
 
-- [ ] metodologia ágil
+- [ ] metodologia ágil (@thiagotrabach)
 
 - desenvolvimento em [docker](https://www.docker.com/) container: sem
   problemas de compatibilidade windows/linux/mac
@@ -52,3 +58,13 @@
   | --------- | ---- | ------- |
   | [atom](https://electron.atom.io/) | cross-platform, mt usado, bonito | dois runtimes: python e JS, não sabemos JS|
   | | |
+
+
+## potenciais parceiros
+
+- OKBR
+
+- setor público
+  
+  - [ ] validação no lado da oferta
+  
