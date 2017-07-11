@@ -8,7 +8,9 @@
 
 - [ ] levantamento de problemas (@wramalho)
 
-- [ ] visita à Mesquita (@harllos e @alifersales)
+- [ ] requerimentos/entraves legais (@harllos)
+
+- [ ] visita à Mesquita (@harllos, @fernandascovino e @alifersales)
 
 - [ ] metodologia ágil (@thiagotrabach)
 
