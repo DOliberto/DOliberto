@@ -1,5 +1,20 @@
 # atas
 
+## 2017-07-13
+
+### past assignments
+
+- [ ] publicação no facebook e medium (@anajansen)
+
+- [ ] levantamento de problemas (@wramalho)
+
+- [ ] visita à Mesquita (@harllos e @alifersales)
+
+- [ ] metodologia ágil (@thiagotrabach)
+
+- [ ] material sobre XML (@odanoburu)
+
+
 ## 2017-07-06
 
 - post no medium apresentando o projeto + post no facebook (@anajansen)
@@ -40,15 +55,3 @@
   - a parte legal do DO
   
   - a parte prática (como faz) o DO
-
-### próxima reunião
-
-- publicação no facebook e medium (@anajansen)
-
-- levantamento de problemas (@wramalho)
-
-- visita à Mesquita (@harllos e ??)
-
-- metodologia ágil (@thiagotrabach)
-
-- material sobre XML (@alifersales @odanoburu)
