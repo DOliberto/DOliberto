@@ -10,7 +10,7 @@
 
 - [ ] requerimentos/entraves legais (@harllos)
 
-- [ ] visita à Mesquita (@harllos, @fernandascovino e @alifersales)
+- [ ] visita à Mesquita (@harllos e @alifersales)
 
 - [ ] metodologia ágil (@thiagotrabach)
 
