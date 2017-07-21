@@ -1,5 +1,23 @@
 # atas
 
+## 2017-07-27
+
+- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
+
+	- incorporar a visão do produto (ver apresentação de scrum) na
+      publicação
+
+- [ ] terminar entrevistas entrevistas (@wramalho)
+
+- [ ] ver como é exatamente a certificação digital, pra ver como
+  encaixa no DOliberto (@harllos)
+
+- [ ] mexer no ROADMAP e já preparar uma proposta pro primeiro sprint
+  (@thiagotrabach, @odanoburu)
+
+- [ ] apresentar material de XML (@odanoburu)
+
+
 ## 2017-07-20
 
 ### past assignments
@@ -11,18 +29,12 @@
 
 - [ ] continuar fazendo entrevistas (@wramalho)
 
-	- [ ] pegar o email dessas pessoas e mandar updates
+	- [x] pegar o email dessas pessoas e mandar updates
 
-- [ ] visita à Mesquita (@harllos e @alifersales)
+- [x] visita à Mesquita (@harllos e @alifersales)
 
-- [ ] ver como é exatamente a certificação digital, pra ver como
-  encaixa no DOliberto (@harllos)
-
-- [ ] mexer no ROADMAP e já preparar uma proposta pro primeiro sprint
-  (@thiagotrabach, @odanoburu)
-
-- [ ] apresentar material de XML (@odanoburu)
-
+- [ ] elaborar proposta de projeto para Mesquita (@thiagotrabach,
+  @odanoburu)
 
 ## 2017-07-13
 
