@@ -28,7 +28,7 @@
 	
 	- colocar as leis mesquitenses em site estático com versionamento
       git (fazer [consolidação](http://eur-lex.europa.eu/content/legis/avis_consolidation.html)?)
-	
+
 		- cada lei é um 
 		[ID lexML](http://projeto.lexml.gov.br/documentacao/Parte-2-LexML-URN.pdf) 
 		e uma git (hash) tree
