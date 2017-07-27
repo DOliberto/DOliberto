@@ -1,80 +1,7 @@
 # atas
 
-## 2017-07-27
-
-- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
-
-	- incorporar a visão do produto (ver apresentação de scrum) na
-      publicação
-
-- [ ] terminar entrevistas entrevistas (@wramalho)
-
-- [ ] ver como é exatamente a certificação digital, pra ver como
-  encaixa no DOliberto (@harllos)
-
-- [ ] mexer no ROADMAP e já preparar uma proposta pro primeiro sprint
-  (@thiagotrabach, @odanoburu)
-
-- [ ] apresentar material de XML (@odanoburu)
-
-
-## 2017-07-20
-
-### past assignments
-
-- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
-
-	- incorporar a visão do produto (ver apresentação de scrum) na
-      publicação
-
-- [ ] continuar fazendo entrevistas (@wramalho)
-
-	- [x] pegar o email dessas pessoas e mandar updates
-
-- [x] visita à Mesquita (@harllos e @alifersales)
-
-- [ ] elaborar proposta de projeto para Mesquita (@thiagotrabach,
-  @odanoburu)
-
-## 2017-07-13
-
-### past assignments
-
-- [x] preparar publicação pro facebook e medium (@anajansen)
-
-	- falta publicar
-
-- [x] preparar levantamento de problemas (@wramalho)
-
-	- fechar a entrevista amanhã
-
-- [x] requerimentos/entraves legais (@harllos)
-
-	- precisa de certificação digital
-	
-	- além disso não parece haver grandes entraves
-
-- [x] metodologia ágil (@thiagotrabach)
-
-- [x] material sobre XML (@odanoburu)
-
-### criação de comunidade
-
-- estratégia é:
-
-	- desenvolver um protótipo
-	
-	- chamar todos interessados em DO (OK, grupos de transparência,
-      etc.) pra uma página virtual (discourse, IRC, google groups?) em
-      que discutiremos o desenvolvimento do DOliberto
-
-### desenvolvimento do DOliberto
-
-#### @thiagotrabach falando de metodologia ágil
-
-#### frontend web ou offline?
-
-
+> convenção: data em ##H2, formato ISO, ordem crescente (para não
+> atrapalhar o diff do git).
 
 ## 2017-07-06
 
@@ -116,3 +43,128 @@
   - a parte legal do DO
   
   - a parte prática (como faz) o DO
+
+
+---
+
+## 2017-07-13
+
+### past assignments
+
+- [x] preparar publicação pro facebook e medium (@anajansen)
+
+	- falta publicar
+
+- [x] preparar levantamento de problemas (@wramalho)
+
+	- fechar a entrevista amanhã
+
+- [x] requerimentos/entraves legais (@harllos)
+
+	- precisa de certificação digital
+	
+	- além disso não parece haver grandes entraves
+
+- [x] metodologia ágil (@thiagotrabach)
+
+- [x] material sobre XML (@odanoburu)
+
+### criação de comunidade
+
+- estratégia é:
+
+	- desenvolver um protótipo
+	
+	- chamar todos interessados em DO (OK, grupos de transparência,
+      etc.) pra uma página virtual (discourse, IRC, google groups?) em
+      que discutiremos o desenvolvimento do DOliberto
+
+### desenvolvimento do DOliberto
+
+#### @thiagotrabach falando de metodologia ágil
+
+#### frontend web ou offline?
+
+
+---
+
+## 2017-07-20
+
+### past assignments
+
+- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
+
+	- incorporar a visão do produto (ver apresentação de scrum) na
+      publicação
+
+- [ ] continuar fazendo entrevistas (@wramalho)
+
+	- [x] pegar o email dessas pessoas e mandar updates
+
+- [x] visita à Mesquita (@harllos e @alifersales)
+
+- [x] elaborar proposta de projeto para Mesquita (@thiagotrabach,
+  @odanoburu)
+
+
+---
+
+## 2017-07-27
+
+### past assignments
+
+- [x] mexer no ROADMAP e já preparar uma proposta pro primeiro sprint
+  (@thiagotrabach, @odanoburu)
+
+### metodologia SCRUM
+
+- scrum master: @thiagotrabach
+
+- product owner: fernanda almeida
+
+## equipes
+
+planejar como será desenvolvida a área para a próxima reunião. vender
+o pq vc acha que devemos seguir nessa direção, citando prós e contras
+dos "concorrentes".
+
+- input/front: @joaocarabetta
+
+- base de dados: @fernandascovino @thiagotrabach
+
+	- Postgres
+	- MongoDB
+	- XML puro + Xquery
+	- Apache Solr
+	- Sphinx
+
+- output: @alifersales @odanoburu
+
+	- TeXlive
+	- [wkhtmltopdf](https://wkhtmltopdf.org/)
+
+
+---
+
+## 2017-08-03
+
+### past assignments
+
+- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
+
+	- incorporar a visão do produto (ver apresentação de scrum) na
+      publicação
+
+- [ ] terminar entrevistas (@wramalho)
+
+- [ ] levantar iniciativas de parseamento do DO
+
+- [ ] avaliar qual DB é melhor para as nossas demandas
+
+- [ ] ver como é exatamente a certificação digital, pra ver como
+  encaixa no DOliberto (@harllos)
+  
+- [ ] fundamentar legalmente o DOliberto (@harllos)
+
+- [ ] apresentar material de XML (@odanoburu)
+

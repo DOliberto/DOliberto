@@ -12,7 +12,7 @@
 
 - [ ] banco de dados dos atos (incluir todas as leis)
 
-	- apache solr, sphinx, ...?
+	- apache solr, sphinx, mongoDB...?
 
 - [ ] definir API para busca
 
