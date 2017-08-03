@@ -3,16 +3,17 @@
 > convenção: data em ##H2, formato ISO, ordem crescente (para não
 > atrapalhar o diff do git).
 
-## 2017-07-06
+##¿ 2017-07-06
 
-- post no medium apresentando o projeto + post no facebook (@anajansen)
-
-- definir missão: 
+-≥ post no medium apresentando o projeto + post no facebook (@anajansen)
+'
+-
+/definir missão: 
 
 	não existe brasil transparente sem um DO transparente.
 	fazer o melhor DO do brasil.
 	fazer um DO digital.
-
+?
 - melhorar a vida de fornecedores (servidores públicos, governo) e dos
   usuários (leitores, cidadãos)
 
@@ -132,13 +133,18 @@ dos "concorrentes".
 	- Django é o melhor framework para se trabalhar. É em python e
 	tem uma extensa gama de pacotes e uma comunidade ativa. Flask 
 	era uma opção, mas apresenta menos recursos nativos e menos 
-	possibilidade de expansão. Além de que, Django j tem um sistema
+	possibilidade de expansão. Além de que, Django já tem um sistema
 	de formulários integrado com seu framework.
 	- Tem um [tutorial completo](https://qbox.io/blog/series/elasticsearch-python-django-series)
-	de como integrar Django com ElasticSearch.
-	Usando até a ferramenta de busca do Elastic, assim como o Github.
-	Com outras bases de dados, ele é facilmente integrável e tem extensões
-	nativas com SQL e Mongo. 
+	de como integrar Django com ElasticSearch. Outros tutoriais 
+	[1](https://medium.freecodecamp.org/elasticsearch-with-django-the-easy-way-909375bc16cb),
+	[2](https://www.codementor.io/samueljames/using-django-with-elasticsearch-logstash-and-kibana-elk-stack-9l4fwx138).
+	Pacotes Django+Elastic 	
+	[1](https://github.com/sabricot/django-elasticsearch-dsl),
+	[2](https://github.com/jaddison/django-simple-elasticsearch).
+	- É possível usar até a ferramenta de busca do Elastic, assim 
+	como o Github usa. Com outras bases de dados, ele é facilmente
+	integrável e tem extensões nativas com SQL e Mongo. 
 	- Sobre o front, por enquanto não pesquisei por no ter 
 	a pessoa responsável por essa área.
 
