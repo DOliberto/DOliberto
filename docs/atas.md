@@ -3,17 +3,16 @@
 > convenção: data em ##H2, formato ISO, ordem crescente (para não
 > atrapalhar o diff do git).
 
-##¿ 2017-07-06
+## 2017-07-06
 
--≥ post no medium apresentando o projeto + post no facebook (@anajansen)
-'
--
-/definir missão: 
+-[x] post no medium apresentando o projeto + post no facebook (@anajansen)
+
+- [x] definir missão: 
 
 	não existe brasil transparente sem um DO transparente.
 	fazer o melhor DO do brasil.
 	fazer um DO digital.
-?
+
 - melhorar a vida de fornecedores (servidores públicos, governo) e dos
   usuários (leitores, cidadãos)
 
@@ -168,16 +167,41 @@ dos "concorrentes".
 
 ### past assignments
 
-- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
+- [x] publicar sobre DOliberto no facebook e medium (@anajansen)
 
 	- incorporar a visão do produto (ver apresentação de scrum) na
       publicação
 
+## decisões
+
+- usar Django e não flask para o webapp
+
+- banco deve ser elastic search ou apache solr
+
+	decidir baseado nas melhores python bindings e integração com
+    django.
+
+- saída PDF usando TeX. como fazer vários formatos? usar pandoc?
+
+- pensar na ordenação dos atos:
+
+	- criar critérios de importância para os elementos da ontologia do
+      DO, organizar por secretaria (segundo qual ordem?)
+
+## 2017-08-10
+
+### past assignments
+
 - [ ] terminar entrevistas (@wramalho)
+
+	- faltam duas
 
 - [ ] levantar iniciativas de parseamento do DO
 
 - [ ] avaliar qual DB é melhor para as nossas demandas
+
+	- apache lucene parece ser o driver das melhores opções: elastic
+      search e apache solr.
 
 - [ ] ver como é exatamente a certificação digital, pra ver como
   encaixa no DOliberto (@harllos)
@@ -185,4 +209,11 @@ dos "concorrentes".
 - [ ] fundamentar legalmente o DOliberto (@harllos)
 
 - [ ] apresentar material de XML (@odanoburu)
+
+- [ ] @wramalho: procurar especificação dos atos do DO, referência,
+  ontologia
+
+- [ ] @fernandascovino, @vitoriaguardiero: levantar a ontologia da
+  prefeitura de mesquitano
+  [protégé](http://protege.stanford.edu/products.php#web-protege)
 
