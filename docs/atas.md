@@ -92,12 +92,12 @@
 
 ### past assignments
 
-- [ ] publicar sobre DOliberto no facebook e medium (@anajansen)
+- [x] publicar sobre DOliberto no facebook e medium (@anajansen)
 
 	- incorporar a visão do produto (ver apresentação de scrum) na
       publicação
 
-- [ ] continuar fazendo entrevistas (@wramalho)
+- [x] continuar fazendo entrevistas (@wramalho)
 
 	- [x] pegar o email dessas pessoas e mandar updates
 
@@ -129,6 +129,18 @@ o pq vc acha que devemos seguir nessa direção, citando prós e contras
 dos "concorrentes".
 
 - input/front: @joaocarabetta
+	- Django é o melhor framework para se trabalhar. É em python e
+	tem uma extensa gama de pacotes e uma comunidade ativa. Flask 
+	era uma opção, mas apresenta menos recursos nativos e menos 
+	possibilidade de expansão. Além de que, Django j tem um sistema
+	de formulários integrado com seu framework.
+	- Tem um [tutorial completo](https://qbox.io/blog/series/elasticsearch-python-django-series)
+	de como integrar Django com ElasticSearch.
+	Usando até a ferramenta de busca do Elastic, assim como o Github.
+	Com outras bases de dados, ele é facilmente integrável e tem extensões
+	nativas com SQL e Mongo. 
+	- Sobre o front, por enquanto não pesquisei por no ter 
+	a pessoa responsável por essa área.
 
 - base de dados: @fernandascovino @thiagotrabach
 
