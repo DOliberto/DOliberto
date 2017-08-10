@@ -192,28 +192,45 @@ dos "concorrentes".
 
 ### past assignments
 
+- [x] levantar iniciativas de parseamento do DO
+
+- [x] ver como é exatamente a certificação digital, pra ver como
+  encaixa no DOliberto (@harllos)
+
+- [x] apresentar material de XML (@odanoburu)
+
+- [x] @wramalho: procurar especificação dos atos do DO, referência,
+  ontologia
+
+- [x] @fernandascovino, @vitoriaguardiero: levantar a ontologia da
+  prefeitura de mesquita no
+  [protégé](http://protege.stanford.edu/products.php#web-protege)
+
+### reunião
+
+- entrevistas encaminhadas, mas ainda faltam duas
+
+- front end dev deve se candidatar ao Lab
+
+## 2017-08-17
+
+### past assignments
+
 - [ ] terminar entrevistas (@wramalho)
 
 	- faltam duas
+	- colocadas no drive
 
-- [ ] levantar iniciativas de parseamento do DO
+- [ ] responder ao bondarovsky (@harllos)
+
+- [ ] fundamentar legalmente o DOliberto (@harllos)
+
+- [ ] @fernandascovino @vitoriaguardiero conseguir a estrutura
+  organizacional da prefs
 
 - [ ] avaliar qual DB é melhor para as nossas demandas
 
 	- apache lucene parece ser o driver das melhores opções: elastic
       search e apache solr.
 
-- [ ] ver como é exatamente a certificação digital, pra ver como
-  encaixa no DOliberto (@harllos)
-  
-- [ ] fundamentar legalmente o DOliberto (@harllos)
-
-- [ ] apresentar material de XML (@odanoburu)
-
-- [ ] @wramalho: procurar especificação dos atos do DO, referência,
-  ontologia
-
-- [ ] @fernandascovino, @vitoriaguardiero: levantar a ontologia da
-  prefeitura de mesquitano
-  [protégé](http://protege.stanford.edu/products.php#web-protege)
-
+### sprint
