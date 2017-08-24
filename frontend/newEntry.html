@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Nova entrada</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--        <script src="jquery.min.js"></script>-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/tomlify.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="topPanel">
+            <span class="vcs">DOliberto</span>
+        </div>
+        <div id="sidePanel"></div>
+        <div id="container">
+            <form onsubmit="gather(this)">
+<!--                <label for="sec">Secretaria:</label>--> <br/>
+                <input type="text" id="sec" name="sec" placeholder="Secretaria" /> <br/><br/>
+<!--                <label for="action">Ação:</label>--> <br/>
+                <input type="text" id="action" name="action" placeholder="Ação" /> <br/><br/>
+<!--                <label for="text">Texto:</label> --> <br/>
+                <textarea type="text" id="text" name="text" placeholder="Texto" ></textarea> <br/><br/>
+                <input id="submit" type="submit" text="Send"/>
+            </form>
+            <div id="json"></div>
+            <div id="toml"></div>
+        </div>
+    </body>
+</html>
