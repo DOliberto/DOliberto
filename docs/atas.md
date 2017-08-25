@@ -223,7 +223,7 @@ dos "concorrentes".
 
 - [ ] responder ao bondarovsky (@harllos)
 
-- [ ] fundamentar legalmente o DOliberto (@harllos)
+- [x] fundamentar legalmente o DOliberto (@harllos)
 
 - [ ] @fernandascovino @vitoriaguardiero conseguir a estrutura
   organizacional da prefs
@@ -234,3 +234,36 @@ dos "concorrentes".
       search e apache solr.
 
 ### sprint
+
+## 2017-08-24
+
+ausentes: @alifersales, @joaocarabetta
+
+- @fernandascovino mostrou o início do levantamento dos tipos de atos
+
+    - discutiu-se sobre a melhor forma de estruturar esse
+      levantamento: se por secreataria ou por ato, se usando
+      arquivo-texto simples ou RDF (protégé) ou um mesmo um arquivo.py
+
+- @souzamatheusp mostrou a primeira versão do webapp (!)
+
+- @odanoburu falou do trabalho de reconhecimento de entidades
+
+## 2017-08-31
+
+### past assignments
+
+- [ ] terminar entrevistas (@wramalho)
+
+	- faltam duas
+
+- [ ] responder ao bondarovsky (@harllos)
+
+- [ ] @souzamatheusp : adicionar features ao webapp (adição de vários
+  atos a um mesmo diário
+
+- [ ] @fernandascovino @harllos : continuar levantamento dos atos
+
+- [ ] @viguardieiro @alifersales : TOML -> PDF usando LaTeX
+
+- [ ] @odanoburu @joaocarabetta : reconhecimento de entidades
