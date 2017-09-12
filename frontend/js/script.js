@@ -15,13 +15,18 @@
    });
    return o;
 }
-var b;
+
+var b
+var atosL = 1
+var atos = {Atos: {}}
+
 function gather(a){
     event.preventDefault()
     json = $('form').serializeObject()
-    console.log(json)
-    $('#json').text(JSON.stringify(json))
-    toml = tomlify(json,null,2)
-    b=toml
-    $('#toml').html(toml)
+    //console.log(json)
+    atos.Atos["Ato" + atosL++] = json
+    //$('#json').text(JSON.stringify(json))
+    toml = tomlify(atos,null,2)
+    console.log(toml)
+    //$('#toml').text(toml)
 }

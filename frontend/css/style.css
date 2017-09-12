@@ -76,8 +76,8 @@ form {
 }
 
 input[type=submit] {
-    font-size: 20px;
-    padding: 5px 45px;
+    font-size: 15px;
+    padding: 5px 25px;
 }
 
 #secs {
@@ -93,9 +93,10 @@ input[type=submit] {
     box-shadow: 1px 2px 5px -2px #888888;
 }
 
-#drop {
+.drop {
     width: 398px;
     height: auto;
+    margin-top: -10px;
     background: #fff;
     position: absolute;
     visibility: hidden;
@@ -136,6 +137,14 @@ input[type=submit] {
 
 
 
-#sec {
-    margin-bottom: 0px;
+
+
+.hovered {
+    background: #eee;
 }
+
+.dropInput {
+    
+}
+
+
