@@ -280,6 +280,9 @@ ausentes: @alifersales, @joaocarabetta
     
     - [x] concatenação de atos
     
+    - [ ] campos: título, responsável, cargo do responsável,
+      secretaria, e o texto
+    
     - [ ] reordenação de atos
     
     - [ ] upload de tabela CSV
