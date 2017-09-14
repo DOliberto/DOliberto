@@ -5,7 +5,7 @@
 
 ## 2017-07-06
 
--[x] post no medium apresentando o projeto + post no facebook (@anajansen)
+- [x] post no medium apresentando o projeto + post no facebook (@anajansen)
 
 - [x] definir missão: 
 
@@ -292,11 +292,15 @@ ausentes: @alifersales, @joaocarabetta
     - ler JSON
     
     - definir classe doliberto.sty:
-    
-        - \ato
+        
+        - \cabecalho (mesquita + data + nº e imagem vetorizada - pedir ao Bruno @harllos)
+	
+	- \ato (título, texto, responsável + cargo)
         
         - \tabelacol
-        
+	
         - \tabela
-    
+	
     - gerar .tex a partir de JSON usando comando apropriado
+    
+
