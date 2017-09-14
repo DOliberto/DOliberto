@@ -267,3 +267,33 @@ ausentes: @alifersales, @joaocarabetta
 - [ ] @viguardieiro @alifersales : TOML -> PDF usando LaTeX
 
 - [ ] @odanoburu @joaocarabetta : reconhecimento de entidades
+
+## 2017-09-14
+
+### past assigments
+
+#### release 0.0.1
+
+- Front:
+
+    - [x] ato -> JSON (para simplificar)
+    
+    - [x] concatenação de atos
+    
+    - [ ] reordenação de atos
+    
+    - [ ] upload de tabela CSV
+
+- Back:
+
+    - ler JSON
+    
+    - definir classe doliberto.sty:
+    
+        - \ato
+        
+        - \tabelacol
+        
+        - \tabela
+    
+    - gerar .tex a partir de JSON usando comando apropriado
