@@ -300,3 +300,27 @@ ausentes: @alifersales, @joaocarabetta
         - \tabela
     
     - gerar .tex a partir de JSON usando comando apropriado
+
+## 2017-09-21
+
+### past assigments
+
+- [x] visita à Mesquita @harllos
+
+    - [ ] ver se as leis de Mesquitas estão todas na internet
+    
+## 2017-09-30
+
+### past assignments
+
+- [ ] interface @souzamatheusp:
+
+    - [ ] drag-n-drop
+    
+    - [ ] criar método de edição de atos
+    
+- [ ] ver URNs @odanoburu
+
+- [ ] rascunhar classe doliberto.sty @odanoburu
+
+- [ ] @harllos continuar leitura do DO
