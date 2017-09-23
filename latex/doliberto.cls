@@ -1,4 +1,5 @@
-% https://www.sharelatex.com/learn/Writing_your_own_class
+% http://www.latex-project.org/help/documentation/clsguide.pdf
+% https://en.wikibooks.org/wiki/LaTeX/
 % https://www.sharelatex.com/learn/Multiple_columns
 % https://www.sharelatex.com/learn/Commands
 % https://www.sharelatex.com/learn/Environments
@@ -8,7 +9,7 @@
 
 % 
 %% load article class with options
-\LoadClass[twocolumn, a4paper]{article}
+\LoadClass[twocolumn, a4paper, 10pt]{article}
 
 % pass unused options to article
 \DeclareOption{onecolumn}{\OptionNotUsed}
@@ -23,6 +24,7 @@
 \RequirePackage{hyperref}
 \RequirePackage[portuges]{datetime2}
 \RequirePackage{datetime2-calc}
+\RequirePackage{titlesec}
 
 % brazilian portuguese support in XeLaTeX
 \setmainlanguage{portuges}
@@ -72,12 +74,20 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 %\renewcommand{\normalsize}{\fontsize{9}{10}\selectfont}
-%\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{0}
 
-\newcommand\ato[4]{\begin{center} #1\\ %
+%
+%% commands for DOli
+
+% this must be in text
+%\titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+
+% título do ato
+\newcommand\headline[1]{\begin{center} {\bfseries \MakeUppercase{#1}} \end{center} \par}
+% quem assina
+\newcommand\byline[2]{\begin{center} {\bfseries \MakeUppercase{#1}} \\%
+			{\small\bfseries {#2}} \\ %
 			\rule[3pt]{0.4\hsize}{0.5pt}\\ \end{center} \par}
-\newcommand\byline[2]{\begin{center} #1 \\%
-			{\footnotesize\bf By \MakeUppercase{#2}} \\ %
-			\rule[3pt]{0.4\hsize}{0.5pt}\\ \end{center} \par}
+% separando seções de cada secretaria
 \newcommand\closearticle{{\begin{center}\rule[6pt]{\hsize}{1pt}\vspace*{-16pt}
 			\rule{\hsize}{0.5pt}\end{center}}}
