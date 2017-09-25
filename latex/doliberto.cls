@@ -62,8 +62,31 @@
 \setlength\textheight{9.5in} % article default = 296pt
 \setlength\oddsidemargin{-30pt}
 
-\pagestyle{fancy}
+\renewcommand{\maketitle}{\thispagestyle{firststyle}
+\vspace*{-40pt}
+\begin{center}
+{\setlength\fboxsep{3mm}\raisebox{12pt}{\framebox[1.2\width]{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}}\hfill%
+{\huge Diário Oficial}\hfill%	
+\raisebox{12pt}{\textbf{\footnotesize \@author}}\\
+\vspace*{0.1in}
+\rule[0pt]{\textwidth}{0.5pt}\\
+{\small {\small\@location, \dataextenso} \hfill \textbf{Diário Oficial Nº \arabic{issue}}}\\
+\rule[6pt]{\textwidth}{1.2pt}
+\end{center}
+}
 
+\fancypagestyle{firststyle}{
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{{\footnotesize \url{\@site}}}
+\cfoot{\thepage}
+\rfoot{{\footnotesize \href{mailto:\@email}{\@email}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\pagestyle{fancy}
 \lhead{{\small\@location, \dataextenso}}
 \chead{\textbf{Diário Oficial Nº \arabic{issue}}}
 \rhead{{\small \@author}}
@@ -77,17 +100,19 @@
 \setcounter{secnumdepth}{0}
 
 %
-%% commands for DOli
+%% DOli macros
 
-% this must be in text
-%\titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+%% this must be in .tex file
+% \titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+
+%% macros
 
 % título do ato
 \newcommand\headline[1]{\begin{center} {\bfseries \MakeUppercase{#1}} \end{center} \par}
 % quem assina
 \newcommand\byline[2]{\begin{center} {\bfseries \MakeUppercase{#1}} \\%
-			{\small\bfseries {#2}} \\ %
+			{\small\bfseries #2} \\ %
 			\rule[3pt]{0.4\hsize}{0.5pt}\\ \end{center} \par}
 % separando seções de cada secretaria
 \newcommand\closearticle{{\begin{center}\rule[6pt]{\hsize}{1pt}\vspace*{-16pt}
-			\rule{\hsize}{0.5pt}\end{center}}}
+      \rule{\hsize}{0.5pt}\end{center}}}
