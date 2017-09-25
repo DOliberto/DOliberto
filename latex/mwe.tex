@@ -1,0 +1,48 @@
+%% needs xelatex to compile!
+%% you can choose your tex engine on sharelatex/overleaf, or
+%% (preferrable) download TeXlive!
+\documentclass{doliberto}
+\usepackage{blindtext}
+\currentissue{4}
+\currentmonth{11}
+\currentyear{1994}
+\currentday{28}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+
+
+\begin{document}
+% \twocolumn[\maketitle]
+\twocolumn{\noindent
+\begin{minipage}{0.4\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=0.4\columnwidth]{prefeitura-mesquita.jpg}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.4\textwidth}
+  {\huge Prefeitura Municipal de Mesquita}\\
+  {\Huge Diário Oficial}
+\end{minipage}}
+
+\tableofcontents
+
+\section{Secretaria Municipal de Educação}
+ 
+\headline{Portaria Nº 394/2017} 
+
+\Blindtext
+
+\byline{Thaís dos Santos Lima}{Secretário Municipal de Educação}
+
+\closearticle
+
+\section{Conselho Municipal da Criança e do Adolescente}
+
+\headline{RESOLUÇÃO CMDCA Nº 003 / 2017.}
+
+\Blindtext
+
+\byline{Jacqueline  Freitas}{\quad}
+
+\end{document}
+% Local Variables:
+% TeX-engine: xetex
+% End:

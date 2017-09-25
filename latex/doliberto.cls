@@ -25,6 +25,7 @@
 \RequirePackage[portuges]{datetime2}
 \RequirePackage{datetime2-calc}
 \RequirePackage{titlesec}
+\RequirePackage{titletoc}
 
 % brazilian portuguese support in XeLaTeX
 \setmainlanguage{portuges}
@@ -55,35 +56,35 @@
 %
 %% text dimensions (for now, defaults from newspaper package)
 \setlength\topmargin{-48pt} % article default = -58pt
-\setlength\headheight{0pt} % article default = 12pt
+%\setlength\headheight{0pt} % article default = 12pt
 \setlength\headsep{34pt} % article default = 25pt
 \setlength\marginparwidth{-20pt} % article default = 121pt
-\setlength\textwidth{7.0in} % article default = 418pt
-\setlength\textheight{9.5in} % article default = 296pt
+\setlength\textwidth{504pt} % article default = 418pt
+\setlength\textheight{684pt} % article default = 296pt
 \setlength\oddsidemargin{-30pt}
 
-\renewcommand{\maketitle}{\thispagestyle{firststyle}
-\vspace*{-40pt}
-\begin{center}
-{\setlength\fboxsep{3mm}\raisebox{12pt}{\framebox[1.2\width]{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}}\hfill%
-{\huge Diário Oficial}\hfill%	
-\raisebox{12pt}{\textbf{\footnotesize \@author}}\\
-\vspace*{0.1in}
-\rule[0pt]{\textwidth}{0.5pt}\\
-{\small {\small\@location, \dataextenso} \hfill \textbf{Diário Oficial Nº \arabic{issue}}}\\
-\rule[6pt]{\textwidth}{1.2pt}
-\end{center}
-}
-
-\fancypagestyle{firststyle}{
+\fancypagestyle{firstpage}{
 \lhead{}
 \chead{}
 \rhead{}
 \lfoot{{\footnotesize \url{\@site}}}
 \cfoot{\thepage}
 \rfoot{{\footnotesize \href{mailto:\@email}{\@email}}}
-\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\renewcommand{\maketitle}{\thispagestyle{firstpage}
+  \vspace*{-40pt}
+  \begin{center}
+    {\setlength\fboxsep{3mm}\raisebox{12pt}{\framebox[1.2\width]{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}}
+    \hfill%
+    {\Huge Diário Oficial}\hfill%	
+    \raisebox{12pt}{\textbf{\footnotesize \@author}}\\
+    \vspace*{0.1in}
+    \rule[0pt]{\textwidth}{0.5pt}\\
+    {\small {\small\@location, \dataextenso} \hfill \textbf{Diário Oficial Nº \arabic{issue}}}\\
+    \rule[6pt]{\textwidth}{1.2pt}
+  \end{center}
 }
 
 \pagestyle{fancy}
@@ -99,11 +100,18 @@
 %\renewcommand{\normalsize}{\fontsize{9}{10}\selectfont}
 \setcounter{secnumdepth}{0}
 
+\titlecontents{section}[0pt]{\addvspace{1pc}%
+}%
+{\contentsmargin{0pt}%
+  \bfseries
+  \makebox[0.5pt][r]{\footnotesize\thecontentslabel\enspace}%
+  \large}
+{\contentsmargin{0pt}%
+  \large}
+{\quad\thepage}[\addvspace{.5pc}]
+
 %
 %% DOli macros
-
-%% this must be in .tex file
-% \titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
 
 %% macros
 
@@ -116,3 +124,11 @@
 % separando seções de cada secretaria
 \newcommand\closearticle{{\begin{center}\rule[6pt]{\hsize}{1pt}\vspace*{-16pt}
       \rule{\hsize}{0.5pt}\end{center}}}
+
+%% this must be in .tex file
+% \titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+%\twocolumn[
+%  \begin{@twocolumnfalse}
+%    \maketitle
+%  \end{@twocolumnfalse}
+%]
