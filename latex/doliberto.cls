@@ -1,8 +1,4 @@
-% http://www.latex-project.org/help/documentation/clsguide.pdf
-% https://en.wikibooks.org/wiki/LaTeX/
-% https://www.sharelatex.com/learn/Multiple_columns
-% https://www.sharelatex.com/learn/Commands
-% https://www.sharelatex.com/learn/Environments
+% https://tex.stackexchange.com/questions/393209/maketitle-output-invading-text/
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{doliberto}[2017/09/21 Mesquita's D.O. class]
@@ -26,6 +22,7 @@
 \RequirePackage{datetime2-calc}
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
+\RequirePackage[skins]{tcolorbox}
 
 % brazilian portuguese support in XeLaTeX
 \setmainlanguage{portuges}
@@ -73,18 +70,72 @@
 \renewcommand{\footrulewidth}{0.4pt}
 }
 
+% to really emulate Mesquita's DO, we can use http://mirrors.concertpass.com/tex-archive/macros/latex/contrib/tcolorbox/tcolorbox.pdf
+% https://tex.stackexchange.com/questions/146781/place-image-and-text-in-same-title-line
+
+\newcommand{\makedolititle}{\thispagestyle{firstpage}
+  \twocolumn[{
+    \vspace*{-40pt}
+    \begin{center}
+      {\setlength\fboxsep{3mm}\raisebox{12pt}{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}
+    \hfill%
+    \parbox[c][2.5cm][c]{0.75\textwidth}{{\Large\bfseries{\@author}}\\{\fontsize{1.5cm}{2.25cm}\selectfont \phantom{|} %to make spacing nicer
+        \MakeUppercase{Diário Oficial}}}\\%	
+    \vspace*{0.1in}
+    \rule[0pt]{\textwidth}{0.5pt}\\
+    {\small \@author} \hfill \textbf{Nº \arabic{issue}} \hfill {\small \@location, \dataextenso}\\
+    \rule[6pt]{\textwidth}{1.2pt}
+  \end{center}
+  }]}
+
+\newcommand{\makedoli}{\thispagestyle{firstpage}
+  \twocolumn[{
+  \vspace*{-40pt}
+  \begin{center}
+    {\setlength\fboxsep{3mm}\raisebox{12pt}{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}
+    \hfill%
+    {\Huge \MakeUppercase{Diário Oficial}}\hfill\\%	
+    %\raisebox{12pt}{\textbf{\footnotesize \@author}}\\
+    \vspace*{0.1in}
+    \rule[0pt]{\textwidth}{0.5pt}\\
+    {\small \@author} \hfill \textbf{Nº \arabic{issue}} \hfill {\small \@location, \dataextenso}\\
+    \rule[6pt]{\textwidth}{1.2pt}
+  \end{center}
+  }]
+}
+
+\newcommand{\dolititle}{
+  \thispagestyle{firstpage}
+  \twocolumn[{
+    \begin{minipage}[t][][t]{0.15\textwidth}
+      \includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][][t]{0.75\textwidth}
+      \textbf{\Large \@author}\\
+        {\Huge \MakeUppercase{Diário Oficial}}%
+    \end{minipage}
+    \vspace*{0.1in}
+    \rule[0pt]{\textwidth}{0.5pt}\\
+    {\small \@location, \dataextenso} \hfill \textbf{Nº \arabic{issue}}\\
+    \rule[6pt]{\textwidth}{1.2pt}
+        }
+    ]}
+
 \renewcommand{\maketitle}{\thispagestyle{firstpage}
+  \twocolumn[{
   \vspace*{-40pt}
   \begin{center}
     {\setlength\fboxsep{3mm}\raisebox{12pt}{\framebox[1.2\width]{\parbox[c]{1.15in}{\includegraphics[height=2.5cm]{prefeitura-mesquita.jpg}}}}}
     \hfill%
-    {\Huge Diário Oficial}\hfill%	
+    {\Huge \MakeUppercase{Diário Oficial}}\hfill%	
     \raisebox{12pt}{\textbf{\footnotesize \@author}}\\
     \vspace*{0.1in}
     \rule[0pt]{\textwidth}{0.5pt}\\
-    {\small {\small\@location, \dataextenso} \hfill \textbf{Diário Oficial Nº \arabic{issue}}}\\
+    {\small {\small\@location, \dataextenso} \hfill \textbf{Nº \arabic{issue}}}\\
     \rule[6pt]{\textwidth}{1.2pt}
   \end{center}
+  }]
 }
 
 \pagestyle{fancy}
@@ -127,8 +178,3 @@
 
 %% this must be in .tex file
 % \titleformat*{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
-%\twocolumn[
-%  \begin{@twocolumnfalse}
-%    \maketitle
-%  \end{@twocolumnfalse}
-%]
