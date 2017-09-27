@@ -11,28 +11,24 @@
 
 
 \begin{document}
-% \twocolumn[\maketitle]
-\twocolumn{\noindent
-\begin{minipage}{0.4\textwidth}% adapt widths of minipages to your needs
-\includegraphics[width=0.4\columnwidth]{prefeitura-mesquita.jpg}
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.4\textwidth}
-  {\huge Prefeitura Municipal de Mesquita}\\
-  {\Huge Diário Oficial}
-\end{minipage}}
-
-\tableofcontents
+\makedolibertotitle
+{\small \tableofcontents}
 
 \section{Secretaria Municipal de Educação}
  
 \headline{Portaria Nº 394/2017} 
 
+\blindtext
+
+\byline{Thaís dos Santos Lima}{Secretária Municipal de Educação}
+
+\headline{Licitação Nº 22/1994}
+
 \Blindtext
 
-\byline{Thaís dos Santos Lima}{Secretário Municipal de Educação}
+\byline{Thaís dos Santos Lima}{Secretária Municipal de Educação}
 
-\closearticle
+\closesection
 
 \section{Conselho Municipal da Criança e do Adolescente}
 
@@ -42,6 +38,26 @@
 
 \byline{Jacqueline  Freitas}{\quad}
 
+\closesection
+
+\begin{secretaria}{Secretaria Municipal de Saúde}
+
+\headline{RESOLUÇÃO CMS Nº 33/2017}
+
+\Blindtext
+
+\byline{João das Neves}{Presidente do CMS}
+
+\end{secretaria}
+
+\begin{secretaria}{Secretaria Municipal de Magia}
+  \headline{Comunicado Nº 22/2017}
+  \Blindtext
+  \byline{Dumbledoria}{Secretário Municipal de Magia}
+  \headline{Portaria Nº190/2017}
+  \Blindtext
+  \byline{Dumbledoria}{Secretário Municipal de Magia}
+\end{secretaria}
 \end{document}
 % Local Variables:
 % TeX-engine: xetex
