@@ -76,7 +76,7 @@
 % to really emulate Mesquita's DO, we can use http://mirrors.concertpass.com/tex-archive/macros/latex/contrib/tcolorbox/tcolorbox.pdf
 % https://tex.stackexchange.com/questions/146781/place-image-and-text-in-same-title-line
 
-\newcommand{\makedolibertotitle}{\thispagestyle{firstpage}
+\newcommand{\dolimaketitle}{\thispagestyle{firstpage}
   \twocolumn[{
     \vspace*{-40pt}
     \begin{center}
@@ -110,6 +110,25 @@
 
 %% macros
 
+% sumário
+\addto\captionsportuges{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Sumário}%
+}
+
+\newcommand{\dolitoc}{
+  \framebox[0.9\columnwidth][c]{\begin{minipage}[c]{0.9\columnwidth}{
+        \begin{center}
+          {\Large \bfseries \MakeUppercase{Poder Executivo}}
+          \vskip 0.25cm
+          {\large \MakeUppercase{Jorge Miranda}}\\\textbf{Prefeito}
+          \vskip 0.125cm
+        \MakeUppercase{Waltinho Paixão}\\\textbf{Vice-Prefeito}
+      \end{center}}
+  \end{minipage}}
+  {\small \tableofcontents}
+}
+
 % título do ato
 \newcommand\headline[1]{\begin{center} {\bfseries \MakeUppercase{#1}} \end{center} \par}
 % quem assina
@@ -121,7 +140,7 @@
       \rule{\hsize}{0.5pt}\end{center}}}
 
 % environment para a seção de notícias de cada secretaria
-\newenvironment{secretaria}[1]{\section{#1}}{\closesection}
+\newenvironment{dolisection}[1]{\section{#1}}{\closesection}
 
 % tables
 % https://tex.stackexchange.com/questions/345379/table-in-two-column
