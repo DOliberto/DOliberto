@@ -21,8 +21,17 @@
 \RequirePackage{datetime2-calc} % idem
 \RequirePackage{titlesec} %
 \RequirePackage{titletoc}
+\RequirePackage{geometry}
 \RequirePackage[citecolor=black,pagebackref,breaklinks=true,plainpages=false]{hyperref} % to make links
-%\RequirePackage[skins]{tcolorbox}
+% \RequirePackage[skins]{tcolorbox}
+
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=10mm,
+ right=10mm
+ }
 
 % brazilian portuguese support in XeLaTeX
 \setmainlanguage{portuges}
@@ -54,14 +63,15 @@
 \newcommand{\@logopath}{prefeitura-mesquita.jpg}
 
 %
-%% text dimensions (for now, defaults from newspaper package)
-\setlength\topmargin{-48pt} % article default = -58pt
-%\setlength\headheight{0pt} % article default = 12pt
-\setlength\headsep{34pt} % article default = 25pt
-\setlength\marginparwidth{-20pt} % article default = 121pt
-\setlength\textwidth{504pt} % article default = 418pt
-\setlength\textheight{684pt} % article default = 296pt
-\setlength\oddsidemargin{-30pt}
+%% text dimensions % defaults
+%\setlength\topmargin{-52pt} % article=-58pt newspaper=-48pt
+%\setlength\headheight{0pt} % article=12pt newspaper=0pt
+%\setlength\headsep{20pt} % article=25pt newspaper=34pt
+%\setlength\marginparwidth{-20pt} % article=121pt newspaper=-20pt
+%\setlength\textwidth{480pt} % article=418pt newspaper=504pt
+%\setlength\textheight{684pt} % article=296pt newspaper=684pt
+%\setlength\oddsidemargin{0pt} % newspaper=-30pt
+%setlength\evensidemargin{0pt}
 
 \fancypagestyle{firstpage}{
 \lhead{}
@@ -71,6 +81,7 @@
 \cfoot{\thepage}
 \rfoot{{\footnotesize \href{mailto:\@email}{\@email}}}
 \renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0pt}
 }
 
 % to really emulate Mesquita's DO, we can use http://mirrors.concertpass.com/tex-archive/macros/latex/contrib/tcolorbox/tcolorbox.pdf
