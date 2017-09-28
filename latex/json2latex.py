@@ -1,67 +1,31 @@
 import os
 from pylatex.base_classes import Environment, CommandBase, Arguments
 from pylatex.package import Package
-from pylatex import Document, Section, UnsafeCommand
+from pylatex import Document, Section, UnsafeCommand, Command
 from pylatex.utils import NoEscape
 
-
-class DoliSection(Environment):
-    _latex_name = 'dolisection'
-    packages = [Package('doliberto')]
-
-
-class DoliMaketitle(CommandBase):
-    _latex_name = 'dolimaketitle'
-    packages = [Package('doliberto')]
-
-
-# Create a new document
-doc = Document(documentclass='doliberto', fontenc=None, inputenc=None, lmodern=False, page_numbers='True' # stupid package imports something we don't want when True, and messes up when False
+#
+## Create a new document
+doc = Document(documentclass="doliberto", fontenc=None, inputenc=None, lmodern=False, page_numbers='True' # stupid package imports something we don't want when True, and messes up when False
                ,textcomp=False, font_size=None)
-with doc.create(Section('Custom commands')):
-"""    doc.append(NoEscape(
-        r"""
-        The following is a demonstration of a custom \LaTeX{}
-        command with a couple of parameters.
-        """))
+#
+## preamble
+doc.preamble.append(Command("currentissue", 4)) # substitute correct values
+doc.preamble.append(Command("currentmonth", 11))
+doc.preamble.append(Command("currentyear", 1994))
+doc.preamble.append(Command("currentday", 28))
+doc.preamble.append(Command("titleformat", options='block', arguments=Arguments(NoEscape(r"\large\bfseries\filcenter"), Command("thesection"), Command("1em"), Command("MakeUpperCase"))))
 
-    # Define the new command
-    new_comm = UnsafeCommand('newcommand', '\exampleCommand', options=3,
-                             extra_arguments=r'\color{#1} #2 #3 \color{black}')
-    doc.append(new_comm)
+#
+## document
+doc.append(Command("dolimaketitle"))
+doc.append(Command("dolitoc"))
 
-    # Use our newly created command with different arguments
-    doc.append(ExampleCommand(arguments=Arguments('blue', 'Hello', 'World!')))
-    doc.append(ExampleCommand(arguments=Arguments('green', 'Hello', 'World!')))
-    doc.append(ExampleCommand(arguments=Arguments('red', 'Hello', 'World!')))
-
-with doc.create(Section('Custom environments')):
-    doc.append(NoEscape(
-        r"""
-        The following is a demonstration of a custom \LaTeX{}
-        environment using the mdframed package.
-        """))
-
-    # Define a style for our box
-    mdf_style_definition = UnsafeCommand('mdfdefinestyle',
-                                         arguments=['my_style',
-                                                    ('linecolor=#1,'
-                                                     'linewidth=#2,'
-                                                     'leftmargin=1cm,'
-                                                     'leftmargin=1cm')])
-
-    # Define the new environment using the style definition above
-    new_env = UnsafeCommand('newenvironment', 'exampleEnvironment', options=2,
-                            extra_arguments=[
-                                mdf_style_definition.dumps() +
-                                r'\begin{mdframed}[style=my_style]',
-                                r'\end{mdframed}'])
-    doc.append(new_env)
-
-    # Usage of the newly created environment
-    with doc.create(
-            ExampleEnvironment(arguments=Arguments('red', 3))) as environment:
-        environment.append('This is the actual content')
 """
-# Generate pdf
+for secretaria in secretarias:
+        with doc.create(Section('Custom commands')):
+"""
+
+#
+## Generate tex
 doc.generate_tex('pyla')
