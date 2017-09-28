@@ -1,0 +1,65 @@
+%% needs xelatex to compile!
+%% you can choose your tex engine on sharelatex/overleaf, or
+%% (preferrable) download TeXlive!
+\documentclass{doliberto}
+\usepackage{blindtext}
+\currentissue{4}
+\currentmonth{11}
+\currentyear{1994}
+\currentday{28}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+
+
+\begin{document}
+\dolimaketitle
+\dolitoc
+
+\begin{dolisection}{Secretaria Municipal de Educação}
+ 
+\headline{Portaria Nº 394/2017} 
+
+\blindtext
+
+\byline{Thaís dos Santos Lima}{Secretária Municipal de Educação}
+
+\headline{Licitação Nº 22/1994}
+
+\Blindtext
+
+\byline{Thaís dos Santos Lima}{Secretária Municipal de Educação}
+
+\end{dolisection}
+
+\begin{dolisection}{Conselho Municipal da Criança e do Adolescente}
+
+\headline{RESOLUÇÃO CMDCA Nº 003 / 2017.}
+
+\Blindtext
+
+\byline{Jacqueline  Freitas}{\quad}
+
+\end{dolisection}
+
+\begin{dolisection}{Secretaria Municipal de Saúde}
+
+\headline{RESOLUÇÃO CMS Nº 33/2017}
+
+\Blindtext
+
+\byline{João das Neves}{Presidente do CMS}
+
+\end{dolisection}
+
+\begin{dolisection}{Secretaria Municipal de Magia}
+  \headline{Comunicado Nº 22/2017}
+  \Blindtext
+  \byline{Dumbledoria}{Secretário Municipal de Magia}
+  
+  \headline{Portaria Nº190/2017}
+  \Blindtext
+  \byline{Dumbledoria}{Secretário Municipal de Magia}
+\end{dolisection}
+\end{document}
+% Local Variables:
+% TeX-engine: xetex
+% End:

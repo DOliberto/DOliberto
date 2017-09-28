@@ -5,7 +5,7 @@
 
 ## 2017-07-06
 
--[x] post no medium apresentando o projeto + post no facebook (@anajansen)
+- [x] post no medium apresentando o projeto + post no facebook (@anajansen)
 
 - [x] definir missão: 
 
@@ -267,3 +267,78 @@ ausentes: @alifersales, @joaocarabetta
 - [ ] @viguardieiro @alifersales : TOML -> PDF usando LaTeX
 
 - [ ] @odanoburu @joaocarabetta : reconhecimento de entidades
+
+## 2017-09-14
+
+### past assigments
+
+#### release 0.0.1
+
+- Front:
+
+    - [x] ato -> JSON (para simplificar)
+    
+    - [x] concatenação de atos
+    
+    - [x] campos: título, responsável, cargo do responsável,
+      secretaria, e o texto
+    
+    - [ ] reordenação de atos
+    
+    - [ ] upload de tabela CSV
+
+- Back:
+
+    - ler JSON
+    
+    - definir classe doliberto.sty:
+        
+        - \cabecalho (mesquita + data + nº e imagem vetorizada - pedir ao Bruno @harllos)
+	
+	- \ato (título, texto, responsável + cargo)
+        
+        - \tabelacol
+	
+        - \tabela
+	
+    - gerar .tex a partir de JSON usando comando apropriado
+
+## 2017-09-21
+
+### past assigments
+
+- [x] visita à Mesquita @harllos
+
+    - [ ] ver se as leis de Mesquitas estão todas na internet
+    
+## 2017-09-30
+
+### past assignments
+
+- front
+    
+    - [ ] reordenação de atos
+    
+    - [ ] upload de tabela CSV
+    
+    - [ ] gerar arquivo json (nome: do-mesquita-YYYY-MM-DD)
+    
+    - pegar números de lei/resolução? @harllos
+
+- doliberto latex class
+
+    - [x] \cabecalho (mesquita + data + nº e imagem vetorizada - pedir
+      ao Bruno @harllos)
+	
+	- [x] \ato (título, texto, responsável + cargo)
+        
+    - [ ] \tabelacol
+	
+    - [ ] \tabela
+	
+- PyLaTeX
+
+    - [ ] ler json
+    
+    - [ ] gerar .tex a partir de JSON usando comandos apropriados da
+      classe doliberto.sty
