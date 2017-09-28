@@ -280,7 +280,7 @@ ausentes: @alifersales, @joaocarabetta
     
     - [x] concatenação de atos
     
-    - [ ] campos: título, responsável, cargo do responsável,
+    - [x] campos: título, responsável, cargo do responsável,
       secretaria, e o texto
     
     - [ ] reordenação de atos
@@ -315,14 +315,30 @@ ausentes: @alifersales, @joaocarabetta
 
 ### past assignments
 
-- [ ] interface @souzamatheusp:
-
-    - [ ] drag-n-drop
+- front
     
-    - [ ] criar método de edição de atos
+    - [ ] reordenação de atos
     
-- [ ] ver URNs @odanoburu
+    - [ ] upload de tabela CSV
+    
+    - [ ] gerar arquivo json (nome: do-mesquita-YYYY-MM-DD)
+    
+    - pegar números de lei/resolução? @harllos
 
-- [ ] rascunhar classe doliberto.sty @odanoburu
+- doliberto latex class
 
-- [ ] @harllos continuar leitura do DO
+    - [x] \cabecalho (mesquita + data + nº e imagem vetorizada - pedir
+      ao Bruno @harllos)
+	
+	- [x] \ato (título, texto, responsável + cargo)
+        
+    - [ ] \tabelacol
+	
+    - [ ] \tabela
+	
+- PyLaTeX
+
+    - [ ] ler json
+    
+    - [ ] gerar .tex a partir de JSON usando comandos apropriados da
+      classe doliberto.sty
