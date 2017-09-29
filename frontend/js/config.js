@@ -1,22 +1,28 @@
 config = {
     formStructure: [
         {
+            elementId: "titulo",
+            internalType: "textInput",
+            tip: "Título",
+            requiresAfter: null
+        },
+        {
+            elementId: "responsavel",
+            internalType: "dropInput",
+            tip: "Responsável",
+            requiresAfter: ["drop", "br"]
+        },
+        {
+            elementId: "cargo_responsavel",
+            internalType: "dropInput",
+            tip: "Cargo do responsável",
+            requiresAfter: ["drop", "br"]
+        },
+        {
             elementId: "sec",
             internalType: "dropInput",
             tip: "Secretaria",
             requiresAfter: ["drop", "br"]
-        },
-        {
-            elementId: "sec2",
-            internalType: "dropInput",
-            tip: "Teste",
-            requiresAfter: ["drop", "br"]
-        },
-        {
-            elementId: "action",
-            internalType: "textInput",
-            tip: "Ação",
-            requiresAfter: null
         },
         {
             elementId: "text",
@@ -31,7 +37,7 @@ config = {
             requiresAfter: null
         }
     ],
-    
+
     inputData: {
         sec: [
             "Secretaria 1",
@@ -49,7 +55,7 @@ config = {
             "Teste 6",
         ]
     },
-    
+
     inputAttr: {
         dropInput: {
             fixed: [
@@ -132,12 +138,14 @@ dropInput = {
     createOptions: function(v) {
         options = []
         data = this.getAllInputs(this.id)
-        for(i=0;i<data.length;i++) {
-            if(data[i].indexOf(v) != -1) {
-                o = document.createElement("div")
-                o.setAttribute("class","option")
-                o.innerText = data[i]
-                options.push(o)
+        if(typeof data != 'undefined'){
+            for(i=0;i<data.length;i++) {
+                if(data[i].indexOf(v) != -1) {
+                    o = document.createElement("div")
+                    o.setAttribute("class","option")
+                    o.innerText = data[i]
+                    options.push(o)
+                }
             }
         }
         return options
@@ -271,22 +279,22 @@ dropInput = {
         this.getField(this.id)[0].value = sugg
         setTimeout(function(){dropInput.collapseOptions()},50)
     },
-    
+
     onBlur: function(id) {
         this.collapseOptions()
     },
-    
+
     getAllInputs: function(id) {
         return this.getConfig().inputData[id]
     },
-    
+
     getConfig: function() {
         return config
     },
-    
+
     getField: function(id2) {
         return ($("#" + this.id))
     },
-    
+
     id: ""
 }
