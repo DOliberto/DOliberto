@@ -95,3 +95,15 @@ def read_json_and_make_doli(json_path, pdf=None):
         return make_pdf(dolidoc, outpath)
     else:
         return make_tex(dolidoc, outpath)
+
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Turns a .json document in the appropriate format into a .pdf or .tex file. This utility is part of the DOliberto project (see github.com/labfgv/doliberto.")
+    parser.add_argument("path", type=str,
+                        help="path to .json file")
+    parser.add_argument("-t", "--tex", action="store_true",
+                        help="output only the .tex file")
+    args = parser.parse_args()
+    read_json_and_make_doli(args.path, not args.tex)
