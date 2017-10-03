@@ -1,6 +1,7 @@
 import os
 import datetime
 import json
+from collections import OrderedDict
 from pylatex.base_classes import Environment, Arguments
 from pylatex.package import Package
 from pylatex import Document, Command
@@ -11,6 +12,39 @@ TO-DO:
 - chaves do .json não são finais, não sincronizadas com frontend
 - implementar ordenação dos atos por secretaria e alterar função correspondente
 """
+
+#
+## validating JSON
+
+def read_content_from_json(json_path):
+    assert os.path.isfile(json_path)
+    with open(json_path) as f:
+        do_contents = json.load(f, object_pairs_hook=OrderedDict)
+    return do_contents
+
+def validate_doli_order(doli):
+    secs_seen = {}
+    last_seen = None
+    for ato in doli["atos"]:
+        current_sec = ato["sec"]
+        if last_seen != current_sec:
+            assert not secs_seen.get(current_sec, False)
+            last_seen = current_sec
+            secs_seen[current_sec] = True
+    return None
+
+#
+## ordering JSON
+
+def propose_doli_order(doli):
+    ordered_doli = OrderedDict()
+    for ix, ato in enumerate(doli["atos"]):
+        current_sec = ato["sec"]
+        if ordered_doli.get(current_sec, False):
+            ordered_doli[current_sec].append(ato)
+        else:
+            ordered_doli[current_sec] = [ato]
+    return ordered_doli
 
 #
 ## Create a new document
@@ -39,12 +73,6 @@ def make_title_and_toc(dolidoc):
     dolidoc.append(Command("dolimaketitle"))
     dolidoc.append(Command("dolitoc"))
     return dolidoc
-
-def read_content_from_json(json_path):
-    assert os.path.isfile(json_path)
-    with open(json_path) as f:
-        do_contents = json.load(f)
-    return do_contents
 
 def make_atos(dolidoc, atos):
     for ix, ato in atos.items():
@@ -95,8 +123,6 @@ def read_json_and_make_doli(json_path, pdf=None):
         return make_pdf(dolidoc, outpath)
     else:
         return make_tex(dolidoc, outpath)
-
-
 
 if __name__ == "__main__":
     import argparse
