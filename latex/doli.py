@@ -33,6 +33,10 @@ def validate_doli_order(doli):
             secs_seen[current_sec] = True
     return None
 
+def read_and_validate_doli_order(json_path):
+    doli = read_content_from_json(json_path)
+    return validate_doli_order(doli)
+
 #
 ## ordering JSON
 
@@ -112,24 +116,36 @@ def make_tex(dolidoc, outpath):
     dolidoc.generate_tex(outpath)
     return os.path.isfile(outpath)
 
-def read_json_and_make_doli(json_path, pdf=None):
-    if pdf is None:
-        pdf = False
+def read_json_and_make_doli(json_path, only_tex=None):
+    if only_tex is None:
+        only_tex = False
     dolidoc = make_doli_document()
     do_contents = read_content_from_json(json_path)
     dolidoc = make_doli(dolidoc, do_contents)
     outpath = infer_outpath_from_json_path(json_path)
-    if pdf:
-        return make_pdf(dolidoc, outpath)
-    else:
+    if only_tex:
         return make_tex(dolidoc, outpath)
+    else:
+        return make_pdf(dolidoc, outpath)
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Turns a .json document in the appropriate format into a .pdf or .tex file. This utility is part of the DOliberto project (see github.com/labfgv/doliberto.")
-    parser.add_argument("path", type=str,
-                        help="path to .json file")
-    parser.add_argument("-t", "--tex", action="store_true",
-                        help="output only the .tex file")
+    parser = argparse.ArgumentParser(description="This utility is part of the DOliberto project (see github.com/labfgv/doliberto.")
+    subparsers = parser.add_subparsers(title="subcommands", help="sub-command help")
+    # make
+    description_help = "turns a .json document in the appropriate format into a .pdf or .tex file."
+    parser_mk = subparsers.add_parser("make", description=description_help, help=description_help, aliases=["mk"])
+    parser_mk.add_argument("path", type=str,
+                        help="path to .json file with DO contents.")
+    parser_mk.add_argument("-t", "--tex", action="store_true",
+                        help="output only the .tex file.")
+    parser_mk.set_defaults(func=lambda x: read_json_and_make_doli(x.path, x.tex))
+    # validate
+    # not working yet because not aligned with frontend
+    parser_val = subparsers.add_parser("validate", description="validates atos order in .json document with DO contents. atos order is correct if all atos from the same secretaria are adjacent.", help="validate atos order in .json document with DO contents.", aliases=['val'])
+    parser_val.add_argument("path", type=str,
+                        help="path to .json file with DO contents.")
+    parser_val.set_defaults(func=lambda x: read_and_validate_doli_order(x.path))
+    # parse args
     args = parser.parse_args()
-    read_json_and_make_doli(args.path, not args.tex)
+    args.func(args)
