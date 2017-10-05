@@ -108,7 +108,7 @@ def infer_outpath_from_json_path(json_path):
     return outpath
 
 def make_pdf(dolidoc, outpath):
-    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=False, compiler="xelatex", silent=True)
+    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=False, silent=True, compiler ="latexmk", compiler_args=["-xelatex"])
     return os.path.isfile(outpath)
 
 def make_tex(dolidoc, outpath):
