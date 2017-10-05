@@ -10,7 +10,6 @@ from pylatex.utils import NoEscape
 """
 TO-DO:
 - chaves do .json não são finais, não sincronizadas com frontend
-- implementar ordenação dos atos por secretaria e alterar função correspondente
 """
 
 #
@@ -18,7 +17,7 @@ TO-DO:
 
 def read_content_from_json(json_path):
     assert os.path.isfile(json_path)
-    with open(json_path) as f:
+    with open(json_path, encoding="utf8") as f:
         do_contents = json.load(f, object_pairs_hook=OrderedDict)
     return do_contents
 
