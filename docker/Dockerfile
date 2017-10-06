@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install texlive-base te
 RUN apt-get -y --no-install-recommends install python3 python3-setuptools python3-pip
 
 # python packages layer
-RUN pip3 install wheel && pip3 install pylatex
+RUN pip3 install wheel && pip3 install pylatex flask
 
 WORKDIR /app
 
