@@ -1,11 +1,3 @@
-# docker directory
-docker/*
-!docker/Dockerfile
-
-# server directory
-server/*
-!server/server.py
-
 #
 ## python stuff
 
