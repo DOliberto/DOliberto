@@ -83,6 +83,7 @@ def make_title_and_toc(dolidoc):
     return dolidoc
 
 def make_atos(dolidoc, atos):
+    # this is wrong. opening one sec environment for each ato instead of one per secretaria
     for ix, ato in atos.items():
         dolisection = Environment(arguments=ato["sec"])
         """
