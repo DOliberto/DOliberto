@@ -13,14 +13,20 @@ TO-DO:
 """
 
 #
-## validating JSON
-
+## JSON I/O
 def read_content_from_json(json_path):
     assert os.path.isfile(json_path)
     with open(json_path, encoding="utf8") as f:
         do_contents = json.load(f, object_pairs_hook=OrderedDict)
     return do_contents
 
+def save_json(content, path):
+    with open(path, mode='w', encoding="utf8") as f:
+        json.dump(content, f, ensure_ascii=False)
+    return os.path.isfile(path)
+
+#
+## validating JSON
 def validate_doli_order(doli):
     secs_seen = {}
     last_seen = None
@@ -38,7 +44,6 @@ def read_and_validate_doli_order(json_path):
 
 #
 ## ordering JSON
-
 def propose_doli_order(doli):
     ordered_doli = OrderedDict()
     for ix, ato in enumerate(doli["atos"]):
@@ -78,6 +83,7 @@ def make_title_and_toc(dolidoc):
     return dolidoc
 
 def make_atos(dolidoc, atos):
+    # this is wrong. opening one sec environment for each ato instead of one per secretaria
     for ix, ato in atos.items():
         dolisection = Environment(arguments=ato["sec"])
         """
@@ -95,7 +101,7 @@ def make_atos(dolidoc, atos):
             dolidoc.append(Command("byline", arguments=[ato["author"], ato["role"]]))
     return dolidoc
 
-def make_doli(dolidoc, do_contents):
+def make_doli_tex(dolidoc, do_contents):
     issue = do_contents["issue"]
     date = datetime.datetime.strptime(do_contents["date"], "%Y-%m-%d")
     dolidoc = make_preamble(dolidoc, issue, date)
@@ -103,29 +109,40 @@ def make_doli(dolidoc, do_contents):
     dolidoc = make_atos(dolidoc, do_contents["atos"])
     return dolidoc
 
-def infer_outpath_from_json_path(json_path):
-    outpath, _ = os.path.splitext(json_path)
-    return outpath
-
 def make_pdf(dolidoc, outpath):
-    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=False, compiler="xelatex", silent=True)
+    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=True, silent=True, compiler ="latexmk", compiler_args=["-xelatex"])
     return os.path.isfile(outpath)
 
 def make_tex(dolidoc, outpath):
     dolidoc.generate_tex(outpath)
     return os.path.isfile(outpath)
 
+def make_doli(do_contents):
+    dolidoc = make_doli_document()
+    dolidoc = make_doli_tex(dolidoc, do_contents)
+    return dolidoc
+
+def make_doli_and_tex(do_contents, outpath):
+    dolidoc = make_doli(do_contents)
+    return make_tex(dolidoc, outpath)
+
+def make_doli_and_pdf(do_contents, outpath):
+    dolidoc = make_doli(do_contents)
+    return make_pdf(dolidoc, outpath)
+
+def infer_outpath_from_json_path(json_path):
+    outpath, _ = os.path.splitext(json_path)
+    return outpath
+
 def read_json_and_make_doli(json_path, only_tex=None):
     if only_tex is None:
         only_tex = False
-    dolidoc = make_doli_document()
     do_contents = read_content_from_json(json_path)
-    dolidoc = make_doli(dolidoc, do_contents)
     outpath = infer_outpath_from_json_path(json_path)
     if only_tex:
-        return make_tex(dolidoc, outpath)
+        return make_doli_and_tex(do_contents, outpath)
     else:
-        return make_pdf(dolidoc, outpath)
+        return make_doli_and_pdf(do_contents, outpath)
 
 if __name__ == "__main__":
     import argparse

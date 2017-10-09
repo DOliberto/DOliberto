@@ -347,6 +347,8 @@ ausentes: @alifersales, @joaocarabetta
 
 ### past assignments
 
+- definir estrutura do JSON @souzamatheusp @odanoburu
+
 - front (@souzamatheusp)
     
     - [ ] reordenação de atos
@@ -372,7 +374,7 @@ ausentes: @alifersales, @joaocarabetta
 
 - servidor Python (@odanoburu)
 
-    - [ ] receber POST request, fazer .pdf, e enviar pro cliente
+    - [x] receber POST request, fazer .pdf, e enviar pro cliente
 	
 - PyLaTeX (@odanoburu)
 
