@@ -353,13 +353,17 @@ ausentes: @alifersales, @joaocarabetta
     
     - [ ] reordenação de atos
     
-    - transformar .json pra {"atos":[...], "date":"YYYY-MM-DD", "issue":53}
+        - @harllos vai ver com Léo, arrumar ordem intersecretaria no python
+        
+        - @harllos pedir pro Léo as siglas das secretarias
+    
+    - [x] transformar .json pra {"atos":[...], "date":"YYYY-MM-DD", "issue":53}
     
     - [ ] upload de tabela .csv
     
     - [ ] fazer POST request
     
-    - [ ] pegar números de lei/resolução? @harllos
+    - [x] pegar números de lei/resolução? @harllos
 
 - doliberto latex class (@viguardieiro)
 
@@ -382,3 +386,35 @@ ausentes: @alifersales, @joaocarabetta
     
     - [x] gerar .tex a partir de JSON usando comandos apropriados da
       classe doliberto.sty
+      
+    - [ ] adaptar código pra lista
+
+## 2017-10-11
+
+### past assignments
+
+- front (@souzamatheusp)
+    
+    - [ ] reordenação de atos
+    
+        - @harllos vai ver com Léo, arrumar ordem intersecretaria no python
+        
+        - @harllos pedir pro Léo as siglas das secretarias
+    
+    - [ ] upload de tabela .csv
+    
+    - [ ] fazer POST request
+
+- doliberto latex class (@viguardieiro)
+        
+    - [ ] \tabelacol
+	
+    - [ ] \tabela
+
+- servidor Python (@odanoburu)
+
+    - [x] receber POST request, fazer .pdf, e enviar pro cliente
+	
+- PyLaTeX (@odanoburu)
+      
+    - [ ] adaptar código pra nova estrutura do .json (lista)
