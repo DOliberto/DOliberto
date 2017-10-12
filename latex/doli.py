@@ -1,15 +1,17 @@
 import os
 import datetime
 import json
-from collections import OrderedDict
+from collections import defaultdict
 from pylatex.base_classes import Environment, Arguments
 from pylatex.package import Package
 from pylatex import Document, Command
 from pylatex.utils import NoEscape
 
 """
-TO-DO:
-- chaves do .json não são finais, não sincronizadas com frontend
+
+everything specific to Mesquita has 'mesquita' in its name. (assuming DO
+structure is mostly the same across Brazil).
+
 """
 
 #
@@ -17,7 +19,7 @@ TO-DO:
 def read_content_from_json(json_path):
     assert os.path.isfile(json_path)
     with open(json_path, encoding="utf8") as f:
-        do_contents = json.load(f, object_pairs_hook=OrderedDict)
+        do_contents = json.load(f)
     return do_contents
 
 def save_json(content, path):
@@ -44,15 +46,29 @@ def read_and_validate_doli_order(json_path):
 
 #
 ## ordering JSON
-def propose_doli_order(doli):
-    ordered_doli = OrderedDict()
-    for ix, ato in enumerate(doli["atos"]):
-        current_sec = ato["sec"]
-        if ordered_doli.get(current_sec, False):
-            ordered_doli[current_sec].append(ato)
-        else:
-            ordered_doli[current_sec] = [ato]
-    return ordered_doli
+
+# mesquita's ordering function
+def mesquita_order(atos_by_sec):
+    ordered_atos = []
+    pe = "Atos do Poder Executivo"
+    ordered_atos.append((pe, atos_by_sec.pop(pe, [])))
+    sg = "Secretaria de Governo"
+    ordered_atos.append((sg, atos_by_sec.pop(sg, [])))
+    ordered_atos += [(sec, atos) for sec, atos in atos_by_sec.items()]
+    return ordered_atos
+
+def atos_by(atos, key):
+    atos_by = defaultdict(lambda:[])
+    for ato in atos:
+        value = ato[key]
+        atos_by[value].append(ato)
+    return atos_by
+
+def order_doli_atos(atos, ordering_fn=mesquita_order):
+    assert isinstance(atos, list)
+    atos_by_sec = atos_by(atos, key="sec")
+    ordered_atos = ordering_fn(atos_by_sec)
+    return ordered_atos
 
 #
 ## Create a new document
@@ -82,10 +98,9 @@ def make_title_and_toc(dolidoc):
     dolidoc.append(Command("dolitoc"))
     return dolidoc
 
-def make_atos(dolidoc, atos):
-    # this is wrong. opening one sec environment for each ato instead of one per secretaria
-    for ix, ato in atos.items():
-        dolisection = Environment(arguments=ato["sec"])
+def make_atos(dolidoc, ordered_atos):
+    for sec, atos in ordered_atos:
+        dolisection = Environment(arguments=sec)
         """
         default _latex_name for Environment is 'environment', so we either 
         have to create a class for each custom Environment we want to use, 
@@ -96,9 +111,10 @@ def make_atos(dolidoc, atos):
         """
         dolisection._latex_name="dolisection"
         with dolidoc.create(dolisection):
-            dolidoc.append(Command("headline", arguments=ato["title"]))
-            dolidoc.append(ato["text"])
-            dolidoc.append(Command("byline", arguments=[ato["author"], ato["role"]]))
+            for ato in atos:
+                dolidoc.append(Command("headline", arguments=ato["title"]))
+                dolidoc.append(ato["text"])
+                dolidoc.append(Command("byline", arguments=[ato["author"], ato["role"]]))
     return dolidoc
 
 def make_doli_tex(dolidoc, do_contents):
@@ -106,7 +122,9 @@ def make_doli_tex(dolidoc, do_contents):
     date = datetime.datetime.strptime(do_contents["date"], "%Y-%m-%d")
     dolidoc = make_preamble(dolidoc, issue, date)
     dolidoc = make_title_and_toc(dolidoc)
-    dolidoc = make_atos(dolidoc, do_contents["atos"])
+    atos = do_contents["atos"]
+    ordered_atos = order_doli_atos(atos)
+    dolidoc = make_atos(dolidoc, ordered_atos)
     return dolidoc
 
 def make_pdf(dolidoc, outpath):
