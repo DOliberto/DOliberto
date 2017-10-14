@@ -8,18 +8,32 @@
         <script src="js/script.js"></script>
         <script src="js/config.js"></script>
         <script src="js/run.js"></script>
+        <script src="js/Sortable.min.js"></script>
     </head>
     <body onclick="dropInput.globalClick(event)">
+
         <div id="topPanel">
             <span class="vcs">DOliberto</span>
         </div>
-        <div id="sidePanel"></div>
+        <div id="sidePanel">
+            <div class="action" onclick="newAto()">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Novo ato</div>
+            <br/>
+            <div id="atosHolder" class="atosHolder"></div>
+        </div>
         <div id="container">
-            <form onsubmit="gather(this)">
+            <div id="landing">
+                <form onsubmit="doneLanding(this)">
+                    <input type="number" id="lIssue" placeholder="Issue"><br/><br/>
+                    <label style="font-size:17.5px; margin-right:10px;">Data do DO:</label>
+                    <input type="date" id="lDate"><br/><br/>
+                    <input type="submit" value="Continuar">
+                </form>
+            </div>
+            <form id="mainForm" onsubmit="gather(this)">
 <!--                <label for="sec">Secretaria:</label> <br/>-->
-<!--                <input type="text" class="dropInput" id="sec" name="sec" placeholder="Secretaria" autocomplete="off" oninput="dropInput.tInput(this.id)" onkeydown="dropInput.keyEO(event)" onblur="dropInput.onBlur(this.id)"/> 
+<!--                <input type="text" class="dropInput" id="sec" name="sec" placeholder="Secretaria" autocomplete="off" oninput="dropInput.tInput(this.id)" onkeydown="dropInput.keyEO(event)" onblur="dropInput.onBlur(this.id)"/>
                 <div class="drop" id="drop_sec"></div> <br/><br/>
-                <input type="text" class="dropInput" id="sec2" name="sec2" placeholder="Teste" autocomplete="off" oninput="dropInput.tInput(this.id,this)" onkeydown="dropInput.keyEO(event)" /> 
+                <input type="text" class="dropInput" id="sec2" name="sec2" placeholder="Teste" autocomplete="off" oninput="dropInput.tInput(this.id,this)" onkeydown="dropInput.keyEO(event)" />
                 <div class="drop" id="drop_sec2"></div> <br/><br/>
 <!--                <select id="secs"></select> <br/><br/>-->
 <!--                <label for="action">Ação:</label> <br/>-->
