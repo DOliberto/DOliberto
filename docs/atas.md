@@ -309,7 +309,7 @@ ausentes: @alifersales, @joaocarabetta
 
 - [x] visita à Mesquita @harllos
 
-    - [ ] ver se as leis de Mesquitas estão todas na internet
+    - [x] ver se as leis de Mesquitas estão todas na internet
     
 ## 2017-09-30
 
@@ -338,7 +338,83 @@ ausentes: @alifersales, @joaocarabetta
 	
 - PyLaTeX
 
-    - [ ] ler json
+    - [x] ler json
     
-    - [ ] gerar .tex a partir de JSON usando comandos apropriados da
+    - [x] gerar .tex a partir de JSON usando comandos apropriados da
       classe doliberto.sty
+
+## 2017-10-05
+
+### past assignments
+
+- definir estrutura do JSON @souzamatheusp @odanoburu
+
+- front (@souzamatheusp)
+    
+    - [ ] reordenação de atos
+    
+        - @harllos vai ver com Léo, arrumar ordem intersecretaria no python
+        
+        - @harllos pedir pro Léo as siglas das secretarias
+    
+    - [x] transformar .json pra {"atos":[...], "date":"YYYY-MM-DD", "issue":53}
+    
+    - [ ] upload de tabela .csv
+    
+    - [ ] fazer POST request
+    
+    - [x] pegar números de lei/resolução? @harllos
+
+- doliberto latex class (@viguardieiro)
+
+    - [x] \cabecalho (mesquita + data + nº e imagem vetorizada - pedir
+      ao Bruno @harllos)
+	
+	- [x] \ato (título, texto, responsável + cargo)
+        
+    - [ ] \tabelacol
+	
+    - [ ] \tabela
+
+- servidor Python (@odanoburu)
+
+    - [x] receber POST request, fazer .pdf, e enviar pro cliente
+	
+- PyLaTeX (@odanoburu)
+
+    - [x] ler json
+    
+    - [x] gerar .tex a partir de JSON usando comandos apropriados da
+      classe doliberto.sty
+      
+    - [ ] adaptar código pra lista
+
+## 2017-10-11
+
+### past assignments
+
+- front (@souzamatheusp)
+    
+    - [ ] reordenação de atos
+    
+        - @harllos vai ver com Léo, arrumar ordem intersecretaria no python
+        
+        - @harllos pedir pro Léo as siglas das secretarias
+    
+    - [ ] upload de tabela .csv
+    
+    - [ ] fazer POST request
+
+- doliberto latex class (@viguardieiro)
+        
+    - [ ] \tabelacol
+	
+    - [ ] \tabela
+
+- servidor Python (@odanoburu)
+
+    - [x] receber POST request, fazer .pdf, e enviar pro cliente
+	
+- PyLaTeX (@odanoburu)
+      
+    - [ ] adaptar código pra nova estrutura do .json (lista)

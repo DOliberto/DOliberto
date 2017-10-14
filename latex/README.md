@@ -10,3 +10,9 @@ be the same.
 it requires XeLaTeX to compile, as we like UTF-8 and native font
 support by default. (it can probably be compiled with LuaTeX too, but
 we haven't tried that yet).
+
+you can compile the `test-doli.json` file using:
+
+```bash
+python3 doli.py make test-doli.json
+```
