@@ -11,15 +11,16 @@ RUN apt-get update && apt-get -y --no-install-recommends install texlive-base te
 
 
 ## python3 layer
-RUN apt-get -y --no-install-recommends install python3 python3-setuptools python3-pip
+# build-essential and the rest is for building uwsgi
+RUN apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel build-essential libpcre3 libpcre3-dev
 
 ## python packages layer
-RUN pip3 install wheel && pip3 install pylatex flask google-cloud
+RUN pip3 install pylatex flask google-cloud uwsgi
 
-WORKDIR /app
+WORKDIR /
 
 ## Copy the /src directory's contents into the container at /app
-ADD ./src /app
+ADD ./src /
 
 ## Make port 80 available to the world outside this container
 EXPOSE 80
@@ -29,6 +30,8 @@ EXPOSE 80
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 # so that flask works
-ENV FLASK_APP main.py
+#ENV FLASK_APP main.py
 
-CMD ["python3", "-m", "flask", "run"]
+#CMD ["python3", "-m", "flask", "run"]
+#CMD ["uwsgi", "-s", "/tmp/yourapplication.sock", "--http", ":80", "--manage-script-name", "--mount", "/yourapplication=main:app"]
+CMD ["uwsgi", "--http", ":80", "--uid", "-w", "main:app", "--enable-threads"]
