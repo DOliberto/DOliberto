@@ -7,8 +7,7 @@ from google.cloud import storage
 HOW-TO
 
 to run server:
-    export FLASK_APP=server.py
-    python3 -m flask run
+    export FLASK_APP=main.py && python3 -m flask run
 to post .json to server:
     curl -H "Content-Type: application/json" --data @test-doli.json http://127.0.0.1:5000/ > teste.pdf
 
@@ -25,12 +24,11 @@ def handle_doli_json():
     do_contents = flask.request.json
     outpath = do_contents["date"]
     json_out = outpath + ".json"
-    #doli.save_json(do_contents, json_out)
+    doli.save_json(do_contents, json_out)
     gcloud_save_file(json_out, "application/json")
     itworked = doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
     pdfmime = "application/pdf"
-    gcloud_save_file(pdf_out, mimetype=pdfmime)
     return flask.send_file(pdf_out, mimetype=pdfmime)
 
 def gcloud_save_file(filename, mimetype):
@@ -42,4 +40,4 @@ def gcloud_save_file(filename, mimetype):
         return os.path.isfile(filepath)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)
