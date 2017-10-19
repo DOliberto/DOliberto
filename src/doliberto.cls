@@ -60,7 +60,7 @@
 \newcommand{\@email}{anexogabinete@mesquita.rj.gov.br}
 \newcommand{\@site}{http://www.mesquita.rj.gov.br/}
 \newcommand{\@location}{Mesquita}
-\newcommand{\@logopath}{prefeitura-mesquita.jpg}
+\newcommand{\@logopath}{media/prefeitura-mesquita.jpg}
 
 %
 %% text dimensions % defaults
