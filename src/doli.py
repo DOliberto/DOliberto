@@ -9,6 +9,9 @@ from pylatex.utils import NoEscape
 
 """
 
+can be run as:
+    python3 doli.py make test-doli.json
+
 everything specific to Mesquita has 'mesquita' in its name. (assuming DO
 structure is mostly the same across Brazil).
 
@@ -175,7 +178,6 @@ if __name__ == "__main__":
                         help="output only the .tex file.")
     parser_mk.set_defaults(func=lambda x: read_json_and_make_doli(x.path, x.tex))
     # validate
-    # not working yet because not aligned with frontend
     parser_val = subparsers.add_parser("validate", description="validates atos order in .json document with DO contents. atos order is correct if all atos from the same secretaria are adjacent.", help="validate atos order in .json document with DO contents.", aliases=['val'])
     parser_val.add_argument("path", type=str,
                         help="path to .json file with DO contents.")
