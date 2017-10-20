@@ -105,3 +105,16 @@ function newAto() {
     $('form').empty()
     createForm()
 }
+
+function sendJson() {
+    var request = new XMLHttpRequest();
+    request.onload = function () {
+        var status = request.status; 
+        var data = this.responseText;
+        console.log(data)
+        alert(data)
+    }
+    request.open("POST", "/generate", 1);
+    request.setRequestHeader("Content-type", "application/json")
+    request.send(JSON.stringify(atos))
+}
