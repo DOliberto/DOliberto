@@ -3,8 +3,8 @@ FROM debian:stable
 # to build image, cd into its directory and run:
 # $ sudo docker build -t doli .
 # after it is built:
-# $ sudo docker run -it -p 5000:80 --net=host doli
-# -it means interactive terminal, and -p 5000:80 maps the container port 80 to the host's port 5000
+# $ sudo docker run -it -p 5000:8080 --net=host doli
+# -it means interactive terminal, and -p 5000:8080 maps the container port 8080 to the host's port 5000
 
 ## texlive layer
 RUN apt-get update && apt-get -y --no-install-recommends install texlive-base texlive-extra-utils texlive-generic-recommended texlive-fonts-recommended texlive-font-utils texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-math-extra texlive-pictures texlive-xetex texlive-generic-extra latexmk
@@ -12,26 +12,25 @@ RUN apt-get update && apt-get -y --no-install-recommends install texlive-base te
 
 ## python3 layer
 # build-essential and the rest is for building uwsgi
-RUN apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel build-essential libpcre3 libpcre3-dev
+RUN apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel apache2 libapache2-mod-wsgi-py3
 
 ## python packages layer
-RUN pip3 install pylatex flask google-cloud uwsgi
+RUN pip3 install pylatex flask google-cloud
 
 WORKDIR /
 
 ## Copy the /src directory's contents into the container at /app
 ADD ./src /
 
-## Make port 80 available to the world outside this container
-EXPOSE 80
+##
+RUN useradd -s /bin/bash user && mv main.conf /etc/apache2/sites-available/main.conf && a2dissite 000-default.conf && a2ensite main.conf && echo "ServerName 104.197.105.228.xip.io" | tee /etc/apache2/conf-available/servername.conf && a2enconf servername
+
+## Make port 8080 available to the world outside this container
+EXPOSE 8080
 
 ## environment variables | should use https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file instead?
 # to make UTF-8 default system encoding
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
-# so that flask works
-#ENV FLASK_APP main.py
 
-#CMD ["python3", "-m", "flask", "run"]
-#CMD ["uwsgi", "-s", "/tmp/yourapplication.sock", "--http", ":80", "--manage-script-name", "--mount", "/yourapplication=main:app"]
-CMD ["uwsgi", "--http", ":80", "--uid", "-w", "main:app", "--enable-threads"]
+CMD ["service", "apache2", "start"]

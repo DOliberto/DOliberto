@@ -7,7 +7,7 @@ from google.cloud import storage
 HOW-TO
 
 to run server:
-    export FLASK_APP=main.py && python3 -m flask run
+    python3 main.py
 to post .json to server:
     curl -H "Content-Type: application/json" --data @test-doli.json http://127.0.0.1:5000/ > teste.pdf
 
@@ -40,4 +40,4 @@ def gcloud_save_file(filename, mimetype):
         return os.path.isfile(filepath)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=True)
