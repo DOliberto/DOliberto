@@ -26,7 +26,7 @@ ADD ./src /var/www/main/main
 RUN useradd -s /bin/bash user && mv main.conf /etc/apache2/sites-available/main.conf && a2dissite 000-default.conf && a2ensite main.conf && echo "ServerName 104.197.105.228.xip.io" | tee /etc/apache2/conf-available/servername.conf && a2enconf servername && mv main.wsgi /var/www/main
 
 ## Make port 8080 available to the world outside this container
-EXPOSE 8080
+EXPOSE 80
 
 ## environment variables | should use https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file instead?
 # to make UTF-8 default system encoding
