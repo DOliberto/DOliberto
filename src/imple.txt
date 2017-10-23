@@ -1,0 +1,47 @@
+var myHeaders = new Headers();
+myHeaders.set("Content-Type", "application/json")
+var myInit = { method: 'POST',
+               headers: myHeaders,
+			   body:JSON.stringify(atos)};
+fetch('/', myInit).then(function(response) {
+  return response.blob();
+}).then(function(myBlob) {
+var reader = new FileReader();
+reader.addEventListener("loadend", function() {
+   console.log(reader.result)
+});
+reader.readAsText(myBlob)
+
+});
+
+
+
+
+function go(){
+var request = new XMLHttpRequest();
+request.onload = function () {
+   var status = request.status; 
+   var data = this.responseText;
+   console.log(data);
+}
+
+request.open("POST", "/", 1);
+request.setRequestHeader("Content-type", "application/json")
+request.send(JSON.stringify(atos))
+}
+
+
+{"atos":[{"title":"T1","author":"A1","role":"C1","sec":"Secretaria 1","text":"Te1"},{"title":"T2","author":"A2","role":"C2","sec":"Secretaria 2","text":"Te2"},{"title":"T3","author":"A3","role":"C3","sec":"Secretaria 1","text":"Te3"}],"date":"2017-10-26","issue":3}
+
+
+link = document.createElement('a')
+link.setAttribute('href','data:text/html,<h1>Hello%2C%20World!<%2Fh1>')
+link.setAttribute('target', '_blank')
+link.setAttribute('rel','noopener noreferrer')
+link.setAttribute('style','visibility:collapse')
+document.body.append(link)
+$('a')[0].click()
+$('a')[0].remove()
+
+
+Áàãñǵé
