@@ -16,8 +16,10 @@ o diário oficial do século XXI.
   |
   |
   - doli.py :: 
-  |    main script, consumes the .json input, treats it, and calls 
-  |    pylatex to produce .pdf output.
+       main script, consumes the .json input, treats it, and calls 
+       pylatex to produce .pdf output.
+  
+- latex/ :: latex source
   |
   - doliberto.cls :: 
        a LaTeX class for typesetting a Diário Oficial (D.O., public 
