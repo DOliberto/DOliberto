@@ -3,8 +3,9 @@ FROM debian:stable
 # to build image, cd into its directory and run:
 # $ sudo docker build -t doli .
 # after it is built:
-# $ sudo docker run -it -p 5000:8080 --net=host doli
-# -it means interactive terminal, and -p 5000:8080 maps the container port 8080 to the host's port 5000
+# $ sudo docker run -it -p 8080:80 doli /bin/bash
+# ou $ sudo docker run -it -p 5000:80 --net=host doli
+# -it means interactive terminal, and -p port1:port2 maps the container port port1 to the host's port port2
 
 ## texlive layer
 RUN apt-get update && apt-get -y --no-install-recommends install texlive-base texlive-extra-utils texlive-generic-recommended texlive-fonts-recommended texlive-font-utils texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-math-extra texlive-pictures texlive-xetex texlive-generic-extra latexmk
@@ -30,12 +31,10 @@ RUN useradd -s /bin/bash -m doli && mv main.conf /etc/apache2/sites-available/ma
 
 ADD ./latex /home/doli/
 
-## Make port 8080 available to the world outside this container
+## Make port 80 available to the world outside this container
 EXPOSE 80
 
 ## environment variables | should use https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file instead?
 # to make UTF-8 default system encoding
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
-
-CMD ["apache2ctl", "start"]

@@ -26,7 +26,7 @@ def handle_doli_json():
     outpath = os.path.join("/home/doli/", do_contents["date"])
     json_out = outpath + ".json"
     doli.save_json(do_contents, json_out)
-    #gcloud_save_file(json_out, "application/json")
+    gcloud_save_file(json_out, "application/json")
     itworked = doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
     pdfmime = "application/pdf"
