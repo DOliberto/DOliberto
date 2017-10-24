@@ -19,11 +19,16 @@ RUN pip3 install pylatex flask google-cloud
 
 WORKDIR /var/www/main/
 
-## Copy the /src directory's contents into the container at /app
+## copy the /src directory's contents into the container at directory
 ADD ./src /var/www/main/
 
-##
-RUN useradd -s /bin/bash doli && mkdir /home/doli/ && mv main.conf /etc/apache2/sites-available/main.conf && a2dissite 000-default.conf && a2ensite main.conf && echo "ServerName 104.197.105.228.xip.io" | tee /etc/apache2/conf-available/servername.conf && a2enconf servername
+## apache config
+RUN useradd -s /bin/bash -m doli && mv main.conf /etc/apache2/sites-available/main.conf && a2dissite 000-default.conf && a2ensite main.conf && echo "ServerName 104.197.105.228.xip.io" | tee /etc/apache2/conf-available/servername.conf && a2enconf servername
+
+## to install doliberto.cls globally
+#RUN texdir=$(kpsewhich -var-value=TEXMFHOME)/tex/latex/commonstuff/ && mkdir -p $texdir && mv doliberto.cls $texdir
+
+ADD ./latex /home/doli/
 
 ## Make port 8080 available to the world outside this container
 EXPOSE 80

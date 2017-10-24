@@ -22,7 +22,8 @@ app = flask.Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def handle_doli_json():
     do_contents = flask.request.json
-    outpath = do_contents["date"]
+    # how not to hardcode this path?
+    outpath = os.path.join("/home/doli/", do_contents["date"])
     json_out = outpath + ".json"
     doli.save_json(do_contents, json_out)
     #gcloud_save_file(json_out, "application/json")
