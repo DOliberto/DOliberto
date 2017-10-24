@@ -1,21 +1,21 @@
 config = {
     formStructure: [
         {
-            elementId: "titulo",
+            elementId: "title",
             internalType: "textInput",
             tip: "Título",
             requiresAfter: null
         },
         {
-            elementId: "responsavel",
+            elementId: "author",
             internalType: "dropInput",
-            tip: "Responsável",
+            tip: "Autor",
             requiresAfter: ["drop", "br"]
         },
         {
-            elementId: "cargo_responsavel",
+            elementId: "role",
             internalType: "dropInput",
-            tip: "Cargo do responsável",
+            tip: "Cargo do autor",
             requiresAfter: ["drop", "br"]
         },
         {
