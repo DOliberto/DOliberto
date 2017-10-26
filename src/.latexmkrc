@@ -1,0 +1,1 @@
+$clean_ext = "xdv";

@@ -54,9 +54,13 @@ def read_and_validate_doli_order(json_path):
 def mesquita_order(atos_by_sec):
     ordered_atos = []
     pe = "Atos do Poder Executivo"
-    ordered_atos.append((pe, atos_by_sec.pop(pe, [])))
+    pe_atos = atos_by_sec.pop(pe, False)
+    if pe_atos:
+        ordered_atos.append((pe, pe_atos))
     sg = "Secretaria de Governo"
-    ordered_atos.append((sg, atos_by_sec.pop(sg, [])))
+    sg_atos = atos_by_sec.pop(sg, False)
+    if sg_atos:
+        ordered_atos.append((sg, sg_atos))
     ordered_atos += [(sec, atos) for sec, atos in atos_by_sec.items()]
     return ordered_atos
 
