@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Nova entrada</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--        <script src="jquery.min.js"></script>-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/run.js"></script>
+        <script src="js/Sortable.min.js"></script>
+    </head>
+    <body onclick="dropInput.globalClick(event)">
+
+        <div id="topPanel">
+            <span class="vcs">DOliberto</span>
+        </div>
+        <div id="sidePanel">
+            <div class="action" onclick="sendJson()">&#10003;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gerar DO</div>
+            <div class="action" onclick="newAto()">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Novo ato</div>
+            <br/>
+            <div id="atosHolder" class="atosHolder"></div>
+        </div>
+        <div id="container">
+            <div id="landing">
+                <form onsubmit="doneLanding(this)">
+                    <input type="number" id="lIssue" placeholder="Issue"><br/><br/>
+                    <label style="font-size:17.5px; margin-right:10px;">Data do DO:</label>
+                    <input type="date" id="lDate"><br/><br/>
+                    <input type="submit" value="Continuar">
+                </form>
+            </div>
+            <form id="mainForm" onsubmit="gather(this)">
+            </form>
+            <div id="json"></div>
+            <div id="toml"></div>
+        </div>
+    </body>
+</html>

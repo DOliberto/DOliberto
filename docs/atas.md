@@ -395,7 +395,7 @@ ausentes: @alifersales, @joaocarabetta
 
 - front (@souzamatheusp)
     
-    - [ ] reordenação de atos
+    - [x] reordenação de atos
     
         - @harllos vai ver com Léo, arrumar ordem intersecretaria no python
         
@@ -405,7 +405,7 @@ ausentes: @alifersales, @joaocarabetta
     
     - [ ] fazer POST request
 
-- doliberto latex class (@viguardieiro)
+- doliberto latex class
         
     - [ ] \tabelacol
 	
@@ -417,4 +417,4 @@ ausentes: @alifersales, @joaocarabetta
 	
 - PyLaTeX (@odanoburu)
       
-    - [ ] adaptar código pra nova estrutura do .json (lista)
+    - [x] adaptar código pra nova estrutura do .json (lista)
