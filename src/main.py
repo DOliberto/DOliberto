@@ -54,21 +54,14 @@ def serve_pages(path):
         if len(path_we) > 1:
             ext = path_we[-1]
             mimetypes = {"html": "text/html",   "js": "application/javascript",   "css": "text/css"}
-            
-        tp = os.path.dirname(os.path.realpath(__file__))
-        np = tp + '/..'
-        os.chdir(np)
-        os.chdir('frontend/')
-        with open(os.getcwd() + '/' + path, 'r', encoding='utf-8') as f:
+        with open('/' + path, 'r', encoding='utf-8') as f:
             r = f.read()
         os.chdir(tp)
         response = flask.Response(r)
         if not ext == '':
             response.headers['Content-Type'] = mimetypes.get(ext) + '; charset=utf-8'
-        
         response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
         return response
-    
     except Exception:
         return '<b>404</b>'
 
