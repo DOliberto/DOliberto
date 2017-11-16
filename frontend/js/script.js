@@ -119,6 +119,7 @@ function sendJson2() {
     request.send(JSON.stringify(atos))
 }
 
+serverURL = 'http://localhost:8888'
 function sendJson() {
     header = new Headers()
     header.set('Content-type', 'application/json')
@@ -126,7 +127,7 @@ function sendJson() {
             "headers": header,
             "body": JSON.stringify(atos)}
     
-    fetch('/generate', init)
+    fetch(serverURL + '/generate', init)
     .then(resp => resp.blob())
     .then(preview)
 }

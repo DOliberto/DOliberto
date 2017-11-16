@@ -19,8 +19,19 @@ create a real-world server with HTTPS (possibly use flask-talisman too).
 
 app = flask.Flask(__name__)
 
+
+@app.route('/generate', methods=['OPTIONS'])
+def handle_cors():
+    print('a')
+    response = flask.Response()
+    response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
+    response.headers['Access-Control-Allow-Headers'] = 'Content-type'
+    
+    return response
+
 @app.route('/generate', methods=['POST'])
 def handle_doli_json():
+    print('a')
     do_contents = flask.request.json
     outpath = do_contents["date"]
     json_out = outpath + ".json"
@@ -32,11 +43,9 @@ def handle_doli_json():
     
     
     response = flask.make_response(flask.send_from_directory('', pdf_out, mimetype=pdfmime))
-    response.headers["Content-Disposition"] = "inline;  filename=test.pdf"
+    response.headers["Content-Disposition"] = "inline;  filename=preview.pdf"
     response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
     return response
-
-#    return flask.Response('Ok, ' + pdf_out)
 
 @app.route('/front/<path:path>', methods=['GET'])
 def serve_pages(path):
@@ -58,6 +67,7 @@ def serve_pages(path):
         if not ext == '':
             response.headers['Content-Type'] = mimetypes.get(ext) + '; charset=utf-8'
         
+        response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
         return response
     
     except Exception:
