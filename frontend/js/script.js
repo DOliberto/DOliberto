@@ -106,7 +106,7 @@ function newAto() {
     createForm()
 }
 
-function sendJson() {
+function sendJson2() {
     var request = new XMLHttpRequest();
     request.onload = function () {
         var status = request.status; 
@@ -118,3 +118,30 @@ function sendJson() {
     request.setRequestHeader("Content-type", "application/json")
     request.send(JSON.stringify(atos))
 }
+
+function sendJson() {
+    header = new Headers()
+    header.set('Content-type', 'application/json')
+    init = {"method": "POST",
+            "headers": header,
+            "body": JSON.stringify(atos)}
+    
+    fetch('/generate', init)
+    .then(resp => resp.blob())
+    .then(preview)
+}
+
+function preview(blob){
+  console.log('pr')
+  data = new Blob([blob], {type: "application/pdf"})
+  url = window.URL.createObjectURL(data);
+  link = document.createElement('a');
+  link.href = url;
+  link.target = "_blank"
+  link.rel="noopener noreferrer"
+  link.click();
+  
+  setTimeout(function(){
+    window.URL.revokeObjectURL(data);
+  }, 100)
+  }

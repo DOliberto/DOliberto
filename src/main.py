@@ -28,10 +28,15 @@ def handle_doli_json():
 #    gcloud_save_file(json_out, "application/json")
     itworked = doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
-#    pdfmime = "application/pdf"
-#    return flask.send_file(pdf_out, mimetype=pdfmime)
+    pdfmime = "application/pdf"
+    
+    
+    response = flask.make_response(flask.send_from_directory('', pdf_out, mimetype=pdfmime))
+    response.headers["Content-Disposition"] = "inline;  filename=test.pdf"
+    response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
+    return response
 
-    return flask.Response('Ok, ' + pdf_out)
+#    return flask.Response('Ok, ' + pdf_out)
 
 @app.route('/front/<path:path>', methods=['GET'])
 def serve_pages(path):
@@ -52,7 +57,7 @@ def serve_pages(path):
         response = flask.Response(r)
         if not ext == '':
             response.headers['Content-Type'] = mimetypes.get(ext) + '; charset=utf-8'
-            
+        
         return response
     
     except Exception:
