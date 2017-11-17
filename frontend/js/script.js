@@ -100,7 +100,7 @@ function sendJson2() {
     request.send(JSON.stringify(atos))
 }
 
-serverURL = 'http://localhost:80'
+serverURL = '104.197.105.228:8888'
 function sendJson() {
     header = new Headers()
     header.set('Content-type', 'application/json')
