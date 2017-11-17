@@ -22,7 +22,6 @@ app = flask.Flask(__name__)
 
 @app.route('/generate', methods=['OPTIONS'])
 def handle_cors():
-    print('a')
     response = flask.Response()
     response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
     response.headers['Access-Control-Allow-Headers'] = 'Content-type'
@@ -45,25 +44,6 @@ def handle_doli_json():
     response.headers["Content-Disposition"] = "inline;  filename=preview.pdf"
     response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
     return response
-
-@app.route('/front/<path:path>', methods=['GET'])
-def serve_pages(path):
-    try:
-        path_we = path.split('.')
-        ext = ''
-        if len(path_we) > 1:
-            ext = path_we[-1]
-            mimetypes = {"html": "text/html",   "js": "application/javascript",   "css": "text/css"}
-        with open('/' + path, 'r', encoding='utf-8') as f:
-            r = f.read()
-        os.chdir(tp)
-        response = flask.Response(r)
-        if not ext == '':
-            response.headers['Content-Type'] = mimetypes.get(ext) + '; charset=utf-8'
-        response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
-        return response
-    except Exception:
-        return '<b>404</b>'
 
 def gcloud_save_file(local_filepath, cloud_basename, mimetype):
     client = storage.Client()
