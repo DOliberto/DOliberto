@@ -20,7 +20,7 @@ create a real-world server with HTTPS (possibly use flask-talisman too).
 app = flask.Flask(__name__)
 
 
-@app.route('/generate', methods=['OPTIONS'])
+@app.route('/', methods=['OPTIONS'])
 def handle_cors():
     response = flask.Response()
     response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
@@ -28,9 +28,8 @@ def handle_cors():
     
     return response
 
-@app.route('/generate', methods=['POST'])
+@app.route('/', methods=['POST'])
 def handle_doli_json():
-    print('a')
     do_contents = flask.request.json
     # how not to hardcode this path?
     outpath = os.path.join("/home/doli/", do_contents["date"])
