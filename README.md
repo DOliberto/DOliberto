@@ -5,7 +5,6 @@ o diário oficial do século XXI.
 ## directory contents
 
 ```
-
 - src/ :: backend source
   |
   - main.py ::
@@ -18,6 +17,10 @@ o diário oficial do século XXI.
   - doli.py :: 
   |    main script, consumes the .json input, treats it, and calls 
   |    pylatex to produce .pdf output.
+  - main.conf ::
+       apache server configuration.
+  
+- latex/ :: latex source
   |
   - doliberto.cls :: 
        a LaTeX class for typesetting a Diário Oficial (D.O., public 
@@ -32,9 +35,12 @@ o diário oficial do século XXI.
 - Dockerfile :: 
     packages all of the above + doliberto's dependencies: a texlive 
     subset needed to run XeLaTeX, flask, Apache, all in a Debian image.
+    it also moves the projects files around the container, and 
+    activates configurations.
 
 ```
 
 ## documentation
 
-documentation is in the source files.
+documentation is in the source files. if you want to run the server
+locally, check the documentation in the Dockerfile and in main.py.
