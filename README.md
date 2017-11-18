@@ -5,7 +5,6 @@ o diário oficial do século XXI.
 ## directory contents
 
 ```
-
 - src/ :: backend source
   |
   - main.py ::
@@ -43,4 +42,5 @@ o diário oficial do século XXI.
 
 ## documentation
 
-documentation is in the source files.
+documentation is in the source files. if you want to run the server
+locally, check the documentation in the Dockerfile and in main.py.

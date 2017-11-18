@@ -6,14 +6,14 @@ from google.cloud import storage
 """
 HOW-TO
 
+requirements: 
+  - Docker (https://www.docker.com/community-edition)
 to run server:
-    python3 main.py
-to post .json to server:
-    curl -H "Content-Type: application/json" --data @test-doli.json http://127.0.0.1:5000/ > teste.pdf
-
-TO-DO
-
-create a real-world server with HTTPS (possibly use flask-talisman too).
+  - clone repository at https://github.com/labfgv/DOliberto
+  - comment the line that calls gcloud_save_file if you're not 
+    authenticated
+  - follow instructions in Dockerfile to build and run image
+  - point your browser to the port you selected and do your thing
 
 """
 
