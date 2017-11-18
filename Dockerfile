@@ -6,6 +6,9 @@ FROM debian:stable
 # $ sudo docker run -it -p hport:cport doli /bin/bash
 ## -it means interactive terminal, and -p hport:cport maps the
 ## -container port to the host's port
+### and then activate the server
+# $docker# apache2ctl start
+## Ctrl+P, Ctrl+Q to exit container without stopping it
 
 ## texlive layer
 RUN apt-get update && apt-get -y --no-install-recommends install texlive-base texlive-extra-utils texlive-generic-recommended texlive-fonts-recommended texlive-font-utils texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-math-extra texlive-pictures texlive-xetex texlive-generic-extra latexmk

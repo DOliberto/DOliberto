@@ -16,8 +16,10 @@ o diário oficial do século XXI.
   |
   |
   - doli.py :: 
-       main script, consumes the .json input, treats it, and calls 
-       pylatex to produce .pdf output.
+  |    main script, consumes the .json input, treats it, and calls 
+  |    pylatex to produce .pdf output.
+  - main.conf ::
+       apache server configuration.
   
 - latex/ :: latex source
   |
@@ -34,6 +36,8 @@ o diário oficial do século XXI.
 - Dockerfile :: 
     packages all of the above + doliberto's dependencies: a texlive 
     subset needed to run XeLaTeX, flask, Apache, all in a Debian image.
+    it also moves the projects files around the container, and 
+    activates configurations.
 
 ```
 
