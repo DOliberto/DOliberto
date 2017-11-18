@@ -19,7 +19,7 @@ create a real-world server with HTTPS (possibly use flask-talisman too).
 
 app = flask.Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/doli', methods=['POST'])
 def handle_doli_json():
     do_contents = flask.request.json
     # how not to hardcode this path?
@@ -29,12 +29,9 @@ def handle_doli_json():
     gcloud_save_file(json_out, os.path.basename(json_out), "application/json")
     itworked = doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
-    pdfmime = "application/pdf"
     directory, filename = os.path.split(pdf_out)
-    response = flask.make_response(flask.send_from_directory(directory, filename, mimetype=pdfmime))
-    response.headers["Content-Disposition"] = "inline;  filename=preview.pdf"
-    response.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin')
-    return response
+    pdfmime = "application/pdf"
+    return flask.send_from_directory(directory, filename, mimetype=pdfmime, as_attachment=True)
 
 def gcloud_save_file(local_filepath, cloud_basename, mimetype):
     client = storage.Client()
