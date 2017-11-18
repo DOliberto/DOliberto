@@ -1,8 +1,6 @@
-//$(document).ready(function(){
-    $.fn.serializeObject = function()
-{
-   var o = {};
-   var a = this.serializeArray();
+$.fn.serializeObject = function() {
+   o = {};
+   a = this.serializeArray();
    $.each(a, function() {
        if (o[this.name]) {
            if (!o[this.name].push) {
@@ -16,30 +14,18 @@
    return o;
 }
 
-var b
-var atosL = 0
-//var atos = {atos: {}}
-var atos = {atos: []}
-//var atosReference = []
+atosL = 0
+atos = {atos: []}
 
 function gather(a){
     event.preventDefault()
     json = $('form').serializeObject()
-    b = json
     if(json.title == "") {
         return false
     }
-    //console.log(json)
     ref = (!editing)? atosL++ : eIndex
     atos.atos[ref] = json
     updateAto(ref)
-    //$('#json').text(JSON.stringify(json))
-    toml = tomlify(atos,null,2)
-    //console.log(toml)
-    console.log(JSON.stringify(atos))
-    //$('#json')[0].innerText = JSON.stringify(atos)
-    //$("#text").value = JSON.stringify(atos)
-    //$('#toml').text(toml)
     newAto()
 }
 
@@ -59,7 +45,6 @@ function doneLanding(form) {
 }
 
 function updateAto(ref){
-    //atosReference.push(ref)
     ato = (!editing)? document.createElement("div") : $('#atoL' + eIndex)[0]
     if(!editing) {
         ato.setAttribute("class","atosList")
@@ -79,10 +64,8 @@ function updateAto(ref){
 }
 
 function handledrag(e) {
-    console.log('a');
     img = new Image()
     img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-    console.log(e);
     e.dataTransfer.setDragImage(img,0,0)
     e.srcElement.classList.add('dragging')
         e.srcElement.classList.remove('atosList')
@@ -106,15 +89,40 @@ function newAto() {
     createForm()
 }
 
-function sendJson() {
-    var request = new XMLHttpRequest();
+function sendJson2() {
+    request = new XMLHttpRequest();
     request.onload = function () {
-        var status = request.status; 
-        var data = this.responseText;
-        console.log(data)
-        alert(data)
+        status = request.status; 
+        data = this.responseText;
     }
     request.open("POST", "/generate", 1);
     request.setRequestHeader("Content-type", "application/json")
     request.send(JSON.stringify(atos))
+}
+
+serverURL = 'http://localhost:8888'
+function sendJson() {
+    header = new Headers()
+    header.set('Content-type', 'application/json')
+    init = {"method": "POST",
+            "headers": header,
+            "body": JSON.stringify(atos)}
+    
+    fetch(serverURL + '/generate', init)
+    .then(resp => resp.blob())
+    .then(preview)
+}
+
+function preview(blob){
+    data = new Blob([blob], {type: "application/pdf"})
+    url = window.URL.createObjectURL(data);
+    link = document.createElement('a');
+    link.href = url;
+    link.target = "_blank"
+    link.rel="noopener noreferrer"
+    link.click();
+  
+    setTimeout(function(){
+        window.URL.revokeObjectURL(data);
+    }, 100)
 }
