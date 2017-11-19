@@ -6,12 +6,13 @@ from google.cloud import storage
 """
 HOW-TO
 
-requirements: 
+requirements:
   - Docker (https://www.docker.com/community-edition)
 to run server:
   - clone repository at https://github.com/labfgv/DOliberto
-  - comment the line that calls gcloud_save_file if you're not 
+  - comment the line that calls gcloud_save_file if you're not
     authenticated
+  - in script.js, change serverURL to localhost
   - follow instructions in Dockerfile to build and run image
   - point your browser to the port you selected and do your thing
 
@@ -24,11 +25,11 @@ app.config["JSON_AS_ASCII"] = False
 def handle_doli_json():
     do_contents = flask.request.get_json()
     # how not to hardcode this path?
-    outpath = os.path.join("/home/doli/", do_contents["date"])
+    outpath = flask.safe_join("/home/doli/", do_contents["date"])
     json_out = outpath + ".json"
     doli.save_json(do_contents, json_out)
     gcloud_save_file(json_out, os.path.basename(json_out), "application/json")
-    itworked = doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
+    doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
     directory, filename = os.path.split(pdf_out)
     pdfmime = "application/pdf"
