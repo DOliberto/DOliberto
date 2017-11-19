@@ -18,10 +18,11 @@ to run server:
 """
 
 app = flask.Flask(__name__)
+app.config["JSON_AS_ASCII"] = False
 
 @app.route('/doli', methods=['POST'])
 def handle_doli_json():
-    do_contents = flask.request.json
+    do_contents = flask.request.get_json()
     # how not to hardcode this path?
     outpath = os.path.join("/home/doli/", do_contents["date"])
     json_out = outpath + ".json"
