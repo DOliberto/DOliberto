@@ -23,6 +23,7 @@ function gather(a){
     if(json.title == "") {
         return false;
     }
+    json.text = json.text.replace(/\r\n/g, "\n");
     ref = (!editing)? atosL++ : eIndex;
     atos.atos[ref] = json;
     updateAto(ref);
