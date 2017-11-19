@@ -43,4 +43,4 @@ o diário oficial do século XXI.
 ## documentation
 
 documentation is in the source files. if you want to run the server
-locally, check the documentation in the Dockerfile and in main.py.
+locally, follow the instructions in main.py.
