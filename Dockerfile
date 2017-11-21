@@ -2,6 +2,7 @@ FROM debian:stable
 
 ## to build image, cd into its directory and run:
 # $ sudo docker build -t doli .
+### if you're having trouble building because debian's servers can't be reached, try this: https://stackoverflow.com/a/40516974/
 ## after it is built:
 # $ sudo docker run -it -p hport:cport doli /bin/bash
 ## -it means interactive terminal, and -p hport:cport maps the
@@ -15,7 +16,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install texlive-base te
 
 ## python3 and apache layer
 # build-essential and the rest is for building uwsgi
-RUN apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel apache2 libapache2-mod-wsgi-py3
+## apt-get update again because https://stackoverflow.com/a/37727984/
+RUN apt-get update && apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel apache2 libapache2-mod-wsgi-py3
 
 ## python packages layer
 RUN pip3 install pylatex flask google-cloud
