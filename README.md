@@ -1,6 +1,7 @@
 # DOliberto
 
-o diário oficial do século XXI.
+[repositório](https://github.com/labfgv/doliberto) do diário oficial
+do século XXI.
 
 ## directory contents
 
@@ -13,13 +14,13 @@ o diário oficial do século XXI.
   |    xelatex, and returns it for download. it currently saves the 
   |    .json in a google cloud server.
   |
-  |
   - doli.py :: 
   |    main script, consumes the .json input, treats it, and calls 
   |    pylatex to produce .pdf output.
+  |
   - main.conf ::
        apache server configuration.
-  
+
 - latex/ :: latex source
   |
   - doliberto.cls :: 
@@ -43,4 +44,9 @@ o diário oficial do século XXI.
 ## documentation
 
 documentation is in the source files. if you want to run the server
-locally, follow the instructions in main.py.
+locally, follow the instructions in `main.py`.
+
+## contributors
+
+DOliberto is mostly developed by our team at LABFGV, and contributors
+are welcome. get in touch!
