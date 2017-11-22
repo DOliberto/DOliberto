@@ -3,6 +3,9 @@
 [repositório](https://github.com/labfgv/doliberto) do diário oficial
 do século XXI.
 
+[[demo v0.0.1](https://streamable.com/rmotz)]
+
+
 ## directory contents
 
 ```
