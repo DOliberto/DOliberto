@@ -20,7 +20,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install texlive-base te
 RUN apt-get update && apt-get -y --no-install-recommends install python3 python3-dev python3-setuptools python3-pip python3-wheel apache2 libapache2-mod-wsgi-py3
 
 ## python packages layer
-RUN pip3 install pylatex flask google-cloud
+RUN pip3 install --upgrade pylatex flask google-cloud-storage
 
 WORKDIR /usr/local/www/wsgi-scripts
 
