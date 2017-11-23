@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
 title: DOliberto
 description: "o Diário Oficial do século XXI."
-show_downloads: "true"
+show_pages: "true"
+lang: "pt-BR"
