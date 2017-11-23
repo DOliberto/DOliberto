@@ -1,9 +1,11 @@
-set-up for local site-building in ubuntu:
+* set-up for local site-building in ubuntu:
+# an alternative is to fork the repo, activate github pages on your
+# fork, and test your changes there
 
-$ sudo apt-get install ruby ruby-dev
+: $ sudo apt-get install ruby ruby-dev
 # add "~/.gem/ruby/2.3.0/bin" to your $PATH variable!
-$ gem install --user-install bundle jekyll
-$ echo -e source "'https://rubygems.org'\ngem 'github-pages', group: :jekyll_plugins" > Gemfile
-$ bundle install --path ~/.gem/ruby/2.3.0/bin
-$ bundle exec jekyll serve
+: $ gem install --user-install bundle jekyll
+: $ echo -e source "'https://rubygems.org'\ngem 'github-pages', group: :jekyll_plugins" > Gemfile
+: $ bundle install --path ~/.gem/ruby/2.3.0/bin
+: $ bundle exec jekyll serve
 # serves at localhost:4000
