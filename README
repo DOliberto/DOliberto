@@ -3,9 +3,9 @@
 # fork, and test your changes there
 
 : $ sudo apt-get install ruby ruby-dev
-# add "~/.gem/ruby/2.3.0/bin" to your $PATH variable!
+# add "~$HOME/.gem/ruby/2.3.0/bin" to your $PATH variable!
 : $ gem install --user-install bundle jekyll
-: $ echo -e source "'https://rubygems.org'\ngem 'github-pages', group: :jekyll_plugins" > Gemfile
+: $ echo -e "source 'https://rubygems.org'\ngem 'github-pages', group: :jekyll_plugins" > Gemfile
 : $ bundle install --path ~/.gem/ruby/2.3.0/bin
 : $ bundle exec jekyll serve
 # serves at localhost:4000
