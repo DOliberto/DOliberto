@@ -1,8 +1,5 @@
 ---
 ---
-# Hello world!
-
-O Diário Oficial do século XXI.
 
 # Um Diário Oficial verdadeiramente digital
 O poder público produz muito mais informação do que uma pessoa (ou
@@ -20,12 +17,12 @@ governamental de maneira acessível à pessoas e computadores se torna
 assim fundamental para o processo democrático.**
 
 
-# Vantagens
+## Vantagens
 
-- Redução de erros nas publicações (correção)
-- Links entre matérias relacionadas e versões do mesmo documento
-  (eficiência)
-- Acesso livre ao texto: buscas simples e eficientes, sistemas de
-  alertas (transparência)
-- Vários formatos, um pra cada atividade: leitura online (html), impressão (pdf), análise (xml, json)
-- Segurança (tbd)
+- <span style="color:black"> Redução de erros nas publicações (correção)</span>
+- <span style="color:black"> Links entre matérias relacionadas e versões do mesmo documento
+  (eficiência) </span>
+- <span style="color:black"> Acesso livre ao texto: buscas simples e eficientes, sistemas de
+  alertas (transparência) </span>
+- <span style="color:black"> Vários formatos, um pra cada atividade: leitura online (html), impressão (pdf), análise (xml, json) </span>
+- <span style="color:black"> Segurança (tbd) </span>
