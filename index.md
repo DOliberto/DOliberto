@@ -18,3 +18,14 @@ as medidas governamentais é um exercício fadado ao fracasso.
 **Disponibilizar todo documento legal e
 governamental de maneira acessível à pessoas e computadores se torna
 assim fundamental para o processo democrático.**
+
+
+# Vantagens
+
+- Redução de erros nas publicações (correção)
+- Links entre matérias relacionadas e versões do mesmo documento
+  (eficiência)
+- Acesso livre ao texto: buscas simples e eficientes, sistemas de
+  alertas (transparência)
+- Vários formatos, um pra cada atividade: leitura online (html), impressão (pdf), análise (xml, json)
+- Segurança (tbd)
