@@ -90,7 +90,7 @@ function newAto() {
     createForm();
 }
 
-serverURL = "http://localhost:8888"; //"http://104.197.105.228:8888"; 
+serverURL = "http://104.197.105.228:8888"; 
 function sendJson() {
     header = new Headers();
     header.set('Content-type', 'application/json');

@@ -28,7 +28,7 @@ def handle_doli_json():
     outpath = flask.safe_join("/home/doli/", do_contents["date"])
     json_out = outpath + ".json"
     doli.save_json(do_contents, json_out)
-    #gcloud_save_file(json_out, os.path.basename(json_out), "application/json")
+    gcloud_save_file(json_out, os.path.basename(json_out), "application/json")
     doli.make_doli_and_pdf(do_contents, outpath) # because .pdf is added automatically by PyLaTeX
     pdf_out = outpath + ".pdf"
     directory, filename = os.path.split(pdf_out)
