@@ -19,10 +19,9 @@ assim fundamental para o processo democrático.**
 
 ## Vantagens
 
-- <span style="color:black"> Redução de erros nas publicações (correção)</span>
-- <span style="color:black"> Links entre matérias relacionadas e versões do mesmo documento
-  (eficiência) </span>
-- <span style="color:black"> Acesso livre ao texto: buscas simples e eficientes, sistemas de
-  alertas (transparência) </span>
-- <span style="color:black"> Vários formatos, um pra cada atividade: leitura online (html), impressão (pdf), análise (xml, json) </span>
-- <span style="color:black"> Segurança (tbd) </span>
+- Redução de erros nas publicações (correção)
+- Links entre matérias relacionadas e versões do mesmo documento 
+  (*eficiência*)
+- Acesso livre ao texto: buscas simples e eficientes, sistemas de
+  alertas (*transparência*)
+- Vários formatos, um pra cada atividade: leitura online (HTML), impressão (PDF), análise (XML, JSON)
