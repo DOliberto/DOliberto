@@ -4,7 +4,7 @@ FROM debian:9
 # $ sudo docker build -t doli .
 ### if you're having trouble building because debian's servers can't be reached, try this: https://stackoverflow.com/a/40516974/
 ## after it is built:
-# $ sudo docker run -it -p hport:cport doli /bin/bash
+# $ sudo docker run -it -p 8080:80 doli /bin/bash
 ## -it means interactive terminal, and -p hport:cport maps the
 ## -container port to the host's port
 ### and then activate the server
@@ -14,6 +14,7 @@ FROM debian:9
 ## texlive layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
     latexmk                                                      \
+    tex-gyre                                                     \
     texlive-base                                                 \
     texlive-extra-utils                                          \
     texlive-font-utils                                           \
@@ -67,5 +68,3 @@ EXPOSE 80
 ## environment variables | should use https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file instead?
 # to make UTF-8 default system encoding
 ENV LANG C.UTF-8
-
-CMD ["apache2","-DFOREGROUND"]

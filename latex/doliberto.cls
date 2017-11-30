@@ -38,7 +38,8 @@
 
 % size of column separator
 \setlength{\columnseprule}{0.4pt}
-
+% size of sepation
+\setlength{\columnsep}{1cm}
 %
 %% variables
 
