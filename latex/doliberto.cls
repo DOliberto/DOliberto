@@ -14,8 +14,9 @@
 
 %
 %% package loading
-\RequirePackage[utf8]{inputenc} % utf-8 support
 \RequirePackage[T1]{fontenc} % utf-8 compatible font
+\RequirePackage[utf8]{inputenc} % utf-8 support
+\RequirePackage{tgtermes}
 \RequirePackage[brazilian]{babel} % portuguese language support
 \RequirePackage{graphicx} % image support
 \RequirePackage{fancyhdr} % customize header and footer
