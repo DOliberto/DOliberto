@@ -29,15 +29,15 @@ O projeto se baseia em dois pilares:
 
 ## Como funciona o DOliberto
 
-![Esquema DO Liberto](/images/esquema_doli.png)
-Format: ![Esquema DOLiberto](url)
-
 **Versão atual: 0.0.1**
 
 Nessa primeira versão do DO Liberto, 
-nosso foco é no *processo de construção do DO*. 
+nosso foco é no **processo de construção do DO**. 
 
-Logo, o DOli 0.0.1 faz o básico: 
+![Esquema DO Liberto](/images/esquema_doli.png)
+Format: ![Esquema DOLiberto](url)
+
+Logo, o *DOli 0.0.1* faz o básico: 
 
 Na plataforma, o **DO Maker** 
 (responsável pelo DO no órgão) insere os textos dos atos, 
