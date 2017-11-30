@@ -14,7 +14,10 @@
 
 %
 %% package loading
-\RequirePackage{polyglossia} % portuguese language support
+\RequirePackage[T1]{fontenc} % utf-8 compatible font
+\RequirePackage[utf8]{inputenc} % utf-8 support
+\RequirePackage{tgtermes}
+\RequirePackage[brazilian]{babel} % portuguese language support
 \RequirePackage{graphicx} % image support
 \RequirePackage{fancyhdr} % customize header and footer
 \RequirePackage[portuges]{datetime2} % to display time
@@ -33,12 +36,10 @@
  right=10mm
  }
 
-% brazilian portuguese support in XeLaTeX
-\setmainlanguage{portuges}
-
 % size of column separator
 \setlength{\columnseprule}{0.4pt}
-
+% size of sepation
+\setlength{\columnsep}{1cm}
 %
 %% variables
 

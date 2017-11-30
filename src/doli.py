@@ -135,7 +135,7 @@ def make_doli_tex(dolidoc, do_contents):
     return dolidoc
 
 def make_pdf(dolidoc, outpath):
-    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=True, silent=True, compiler ="latexmk", compiler_args=["-xelatex"])
+    dolidoc.generate_pdf(filepath=outpath, clean=True, clean_tex=True, silent=True, compiler ="latexmk", compiler_args=["-pdf"])
     return os.path.isfile(outpath)
 
 def make_tex(dolidoc, outpath):
