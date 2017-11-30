@@ -11,6 +11,8 @@ FROM debian:9
 # $docker# apache2ctl start
 ## Ctrl+P, Ctrl+Q to exit container without stopping it
 
+# keep packages/libraries sorted!
+
 ## texlive layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
     latexmk                                                      \
