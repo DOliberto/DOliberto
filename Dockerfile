@@ -20,12 +20,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     texlive-fonts-recommended                                    \
     texlive-generic-extra                                        \
     texlive-generic-recommended                                  \
+    texlive-lang-portuguese                                      \
     texlive-latex-base                                           \
     texlive-latex-extra                                          \
     texlive-latex-recommended                                    \
-    texlive-math-extra                                           \
     texlive-pictures                                             \
-    texlive-xetex                                                \
     && rm -rf /var/lib/apt/lists/*
 
 ## python3 and apache layer
@@ -43,9 +42,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ## python packages layer
 RUN pip3 install --upgrade       \
-    flask ~=0.12.2               \
-    google-cloud-storage ~=1.6.0 \
-    pylatex ~=1.2.1
+    flask~=0.12.2               \
+    google-cloud-storage~=1.6.0 \
+    pylatex~=1.2.1
 
 WORKDIR /usr/local/www/wsgi-scripts
 
