@@ -34,7 +34,7 @@ Format: ![Esquema DOLiberto](url)
 
 ## Objetivos DOliberto
 
-- [X] **Facilitar a elaboração de um D.O. consistente simplificando o
+- [x] **Facilitar a elaboração de um D.O. consistente simplificando o
   trabalho do servidor público e reduzindo os erros.**
 - [ ] Criar um padrão aberto (subordinado ao LeXML) para intercâmbio,
   identificação e estruturação das informações contidas nos diários
