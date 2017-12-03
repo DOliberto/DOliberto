@@ -27,7 +27,7 @@ O projeto se baseia em dois pilares:
 Nessa primeira versão do DO Liberto, 
 nosso foco é no **processo de construção do DO**. 
 
-![](/images/esquema_doli.png | width=240)
+![Esquema DOLiberto](/images/esquema_doli.png)
 
 ## Nossos objetivos
 
