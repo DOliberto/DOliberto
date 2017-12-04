@@ -4,8 +4,8 @@
 
 > O Diário Oficial do século XXI
 
-O DOliberto é um projeto de código aberto que vai mudar a produção de
-Diários Oficiais no Brasil.
+O DOliberto é uma plataforma gratuita em código aberto para a produção
+de Diários Oficiais digitais e transparentes.
 
 O repositório em https://github.com/labfgv/doliberto/ contém:
 
@@ -111,7 +111,8 @@ errado, ou então proponha uma solução para uma das *issues* já
 abertas!
 
 Se você tiver uma nova ideia ou quiser conversar, fale com a gente!
-Você pode abrir uma *issue* ou nos mandar um email.
+Você pode abrir uma *issue* ou nos mandar um
+[email](mailto:labfgv+doliberto@gmail.com).
 
 ## Licença
 
