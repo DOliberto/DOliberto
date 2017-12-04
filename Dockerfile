@@ -70,3 +70,5 @@ EXPOSE 80
 ## environment variables | should use https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file instead?
 # to make UTF-8 default system encoding
 ENV LANG C.UTF-8
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
