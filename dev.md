@@ -1,79 +1,52 @@
 ---
 ---
 # DOliberto para desenvolvedor*s
-# até que ponto isso aqui não deveria estar na página principal
 
 - TOC
 {:toc}
 
-# Um Diário Oficial verdadeiramente digital
-O poder público produz muito mais informação do que uma pessoa (ou
-mesmo um grupo!) pode acompanhar. Da tramitação de projetos nas
-câmaras legislativas às portarias das agências reguladoras, diversas
-regras e atos são propostos sem a devida atenção.
-
-Sem o uso de computadores para filtrar e analisar essa quantidade
-enorme informação, acompanhar e fiscalizar as medidas governamentais é
-um exercício fadado ao fracasso. Disponibilizar todo documento legal e
-governamental de maneira acessível à pessoas e computadores se torna
-assim fundamental para o processo democrático -- facilitando a
-participação, a fiscalização, e a informação popular.
-
-Entre os documentos legais produzidos pelo governo, o Diário Oficial
-(DO) tem papel central. Não é exagero dizer que nada acontece no
-governo antes de publicação em diário oficial, e mesmo entidades
-privadas tem obrigação de usá-lo para alguns tipos de publicação [por exemplo, [lei 6404, Art. 289](http://www.planalto.gov.br/ccivil_03/leis/L6404compilada.htm)].
-
-O Diário Oficial é portanto um alvo comum de projetos que buscam maior
-transparência governamental, uma vez que concentra uma riqueza de
-informações não encontrada em outros veículos. (De leis à listas de
-formados no ensino médio, passando por licitações e contratações, tudo
-passa pelos DOs brasileiros).
-
 Entre os projetos que buscam tornar os DOs brasileiros mais
 acessíveis, o projeto *DOliberto* toma uma abordagem diferente. Ao
 invés de tentar extrair as informações "na marra" e disponibilizá-las
-de maneira mais acessível, o *DOliberto* tenta tornar o processo de
-criação dos DOs transparentes mais simples, o que torna sua adoção por
-municípios e estados mais provável.
+de maneira mais acessível, o *DOliberto* muda o olhar para dentro do processo. 
+O projeto se baseia em dois pilares:
 
-# O que é um DO acessível
-- PDF são ruins (sem indexação e interligação (barsa vs. wikipedia),
-  busca é ruim (hífen quebra), foi feito pra imprimir, não pra ler no
-  computador)
-- buscas não são simples, vc não pode implementar a sua
-- não há sistema de alertas (relacionado ao acima: o texto não é seu)
-- ver outros documentos já produzidos para mais argumentos
+- Tornar o processo de criação dos DOs transparentes mais simples;
+- Ser uma solução escalável, possibilitando adoção por municípios e estados.
 
-# por que captura não funciona
+## Quais os problemas do D.O. nos dias de hoje?
+- **Formato PDF não possui indexação**,  o que torna as buscas não tão simples nem customizáveis;
+- **Diferentes órgãos usam diferentes formatações**, ou seja, não existe um padrão para facilitar
+ as pesquisas e o uso pela população. 
+<!-- não há sistema de alertas: o que significa? -->
 
-- Cada diário é de um jeito
-- Diários mudam
-- PDF não é o formato correto
-- Diário Oficial não é consistente
-- por isso precisamos de resolver a raiz do problema, que é o que o
-  DOli faz
+## Como funciona o DOliberto?
 
-# Objetivos DOli
+**Versão atual: 0.0.1**
 
-- criar um padrão aberto (subordinado ao LeXML) para intercâmbio,
+Nessa primeira versão do DO Liberto, 
+nosso foco é no **processo de construção do DO**. 
+
+![Esquema DOLiberto](/images/esquema_doli.png)
+
+## Nossos objetivos
+
+- Facilitar a elaboração de um D.O. consistente simplificando o
+  trabalho do servidor público e reduzindo os erros.
+- Criar um padrão aberto (subordinado ao LeXML) para intercâmbio,
   identificação e estruturação das informações contidas nos diários
   oficiais, que seja legível por humanos e computadores.
-- facilitar a elaboração de um D.O. consistente simplificando o
-  trabalho do servidor público e reduzindo os erros.
-- versionar as informações disponibilizadas pelo D.O.: sem
+- Versionar as informações disponibilizadas pelo D.O.: sem
   possibilidade de obter informações desatualizadas.
-  
-# vantagens (mover pra landing)
 
-- redução de erros nas publicações (correção)
-- links entre matérias relacionadas e versões do mesmo documento
-  (eficiência)
-- acesso livre ao texto : buscas simples e eficientes, sistemas de
-  alertas (transparência)
-- vários formatos, um pra cada atividade: leitura online (html), impressão (pdf), análise (xml, json)
-- segurança (tbd)
 
-# Como funciona o DOliberto
+## Como contribuir?
 
-# Como contribuir
+Todo nosso trabalho está [disponível no GitHub](https://github.com/labFGV/DOliberto/)!
+
+As etapas e features a serem desenvolvidas estão organizadas em [issues](https://github.com/labFGV/DOliberto/issues) com diferentes categorias,
+onde você pode participar da discussão de cada detalhe do projeto.
+
+**Achou algo legal para desenvolver? Basta fazer um *pull request* para o nosso
+repositório e avaliaremos as modificações para serem incorporadas ao código! ;)**
+

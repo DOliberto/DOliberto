@@ -1,21 +1,20 @@
-# captura de DOs
+# Captura de DOs
 
-- https://github.com/andresmrm/trazdia
+- [TrazDia](https://github.com/andresmrm/trazdia)
 
-- https://github.com/okfn-brasil/queriDO
+- [QueriDO](https://github.com/okfn-brasil/queriDO)
 
-- http://devcolab.each.usp.br/do/
+- [Diário Livre](http://devcolab.each.usp.br/do/)
 
-# empresas
+# Empresas
 
-- https://diariooficial-e.com.br
+- [Diário Oficial-e](https://diariooficial-e.com.br)
 
-# diários digitais
+# Diários Digitais
 
-- https://www.archives.gov/developer (federal register americano, em
+- [National Archives for Developers](https://www.archives.gov/developer) (federal register americano, em
   XML)
-- http://eur-lex.europa.eu/oj/direct-access.html (DO da união
-  europeia, em XML)
-- https://diario.famem.org.br/ (diário oficial dos municípios do
-  maranhão)
-- https://dre.pt (diário oficial de portugal)
+- [EUR-Lex](http://eur-lex.europa.eu/oj/direct-access.html) (DO da União
+  Europeia, em XML)
+- [Diário Oficial do Estado dos Municípios do Maranhão](https://diario.famem.org.br/)
+- [Diário da República Eletrônico](https://dre.pt) (DO de Portugal)
