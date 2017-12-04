@@ -92,10 +92,16 @@ sudo docker build -t doli .
 E, finalmente, rodar a imagem:
 
 ```sh
-sudo docker run -d -p 8080:80 doli
+sudo docker run -d -p 8080:80 --name doli-server doli
 ```
 
-Pronto! Agora é só visitar http://localhost:8888/ .
+Pronto! Agora é só visitar [http://localhost:8888/]().
+
+Para parar o servidor DOliberto, basta fazer:
+
+```sh
+sudo docker stop doli-server
+```
 
 ## Mantenedores
 
