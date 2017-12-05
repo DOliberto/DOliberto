@@ -1,4 +1,4 @@
-# [DOliberto](https://labfgv.github.io/DOliberto)
+# [DOliberto](https://labfgv.github.io/DOliberto) <img src="https://github.com/labFGV/DOliberto/blob/gh-pages/images/logo-doli.jpeg" width="250" align="right"/>
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
