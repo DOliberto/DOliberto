@@ -1,1 +1,30 @@
-# um DO verdadeiramente digital
+---
+---
+# Gestores Públicos: por que adotar o DOliberto?
+
+**Alguns municípios já perceberam as vantagens de utilizar exclusivamente a internet para publicar seu diário oficial**, como [São Paulo](http://www1.folha.uol.com.br/cotidiano/2017/03/1862923-diario-oficial-de-sp-deixara-de-ter-versao-impressa-anuncia-prefeito.shtml) e [Rio de Janeiro](https://www.facebook.com/marcelocrivella/videos/1616522061704371/). A União também[ extinguiu a versão impressa de seu centenário diário](http://portal.imprensanacional.gov.br/web/guest/diario-oficial-da-uniao?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_returnToFullPageURL=%2Fdiario-oficial-da-uniao&_101_assetEntryId=577466&_101_type=content&_101_groupId=68942&_101_urlTitle=decreto-n-9-215-de-29-de-novembro-2017&inheritRedirect=false&redirect=http%3A%2F%2Fportal.imprensanacional.gov.br%2Fweb%2Fguest%2Fdiario-oficial-da-uniao%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_keywords%3Ddi%25C3%25A1rio%2Boficial%2Bimpresso%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fdiario-oficial-da-uniao). 
+
+**No entanto, esses exemplos apresentam problemas.** Isso porque, nos casos de São Paulo e do Rio, apenas deixou-se de imprimir os diários, sem nenhuma grande mudança ou melhoria no modo de desenvolvimento da publicação. No caso da União, há a intenção de desenvolver uma plataforma que melhore o acesso aos dados do DOU, porém ainda não há certeza sobre a possibilidade de uso do software por outros entes públicos.
+
+
+## Vantagens do DOliberto
+O DOli é uma plataforma em que é possível fazer o seu próprio diário oficial como num editor de texto comum, mas voltado totalmente para esse fim. E **com algumas vantagens para a administração pública:**
+
+
+
+1. Dá mais eficiência ao processo de desenvolvimento do DO, pois automatiza trabalhos manuais e melhora o processo de escrita do DO.
+
+2. Facilita o cumprimento de exigências de transparência, cada vez mais exigidos pelos munícipes.
+
+3. Reduz custos de produção, pois o DOliberto é gratuito e sempre será.
+
+4. Facilita a análise da informação pela própria administração pública, pois fornece dados mais precisos.
+
+5. O DOliberto é menos propenso a erros, pois padroniza os atos a serem publicados.
+
+
+## Adoção
+
+**Em regra, um município pode adotar o DOliberto sem alterações legislativas.** Caso tenha interesse em abandonar a versão impressa, [separamos alguns modelos de decretos para extinguir o diário impresso e permanecer somente com a versão online](https://)! 
+
+Em caso de dúvidas, não deixe de consultar nosso [FAQ](https://labfgv.github.io/DOliberto/#faq) ou de [entrar em contato conosco](mailto:labfgv+doliberto@gmail.com)!
