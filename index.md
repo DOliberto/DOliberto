@@ -20,7 +20,7 @@ enorme quantidade de informação, acompanhar e fiscalizar as medidas
 governamentais é um exercício fadado ao fracasso.
 
 **Disponibilizar todo documento legal e governamental de maneira
-acessível à pessoas e computadores se torna assim fundamental para o
+acessível a pessoas e computadores se torna assim fundamental para o
 processo democrático.**
 
 Nesse sentido, o projeto DOliberto busca tornar mais fácil o processo
@@ -50,7 +50,7 @@ Tomemos como exemplo o [ato](http://www.imprensanacional.gov.br/materia/-/asset_
 >    América, removendo-o, ex officio, da Embaixada do Brasil na
 >    Cidade do México, Estados Unidos Mexicanos.
 >
->    Brasília, 1º de dezembro de 2017; 196o da Independência e 129o da
+>    Brasília, 1º de dezembro de 2017; 196º da Independência e 129º da
 >    República.
 >
 >    Aloysio Nunes Ferreira Filho
@@ -68,10 +68,10 @@ texto é produzido automaticamente a partir desses dados, em um
 processo denominado em inglês por *document automation*.
 
 **Naturalmente, nem todo ato se presta a esse tipo de automação**. A
-maior parte das leis não se encaixa nessa estrutura, e nesses casos o
-DOliberto apenas oferece um campo livre de escrita, automatizando
-somente as partes mais básicas do ato, como a data, título, e
-informações do autor.
+maior parte das leis, por exemplo, não se encaixa nessa estrutura, e
+nesses casos o DOliberto apenas oferece um campo livre de escrita,
+automatizando somente as partes mais básicas do ato, como a data,
+título, e informações do autor.
 
 ## Vantagens
 - **correção**: Redução de erros nas publicações;
@@ -81,8 +81,15 @@ informações do autor.
   eficientes, sistemas de alertas;
 - **multiformato**: um formato pra cada atividade: leitura *online*
   (HTML), leitura *offline* (PDF), análise (XML, JSON).
-  
-<!--## Status-->
+
+## Status
+O DOliberto atualmente está na versão `0.0.1`, em pleno
+desenvolvimento. A imagem abaixo resume que etapas já estão
+implementadas, e quais ainda estão para serem desenvolvidas. Para mais
+detalhes, entre em contato conosco, ou veja nosso
+[github](https://github.com/labFGV/DOliberto/issues/36).
+
+![ROADMAP DOliberto](/images/esquema_doli.png)
 
 ## FAQ
 
