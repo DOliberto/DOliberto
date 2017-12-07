@@ -7,5 +7,7 @@
 : $ gem install --user-install bundle jekyll
 : $ echo -e "source 'https://rubygems.org'\ngem 'github-pages', group: :jekyll_plugins" > Gemfile
 : $ bundle install --path ~/.gem/ruby/2.3.0/bin
+# you may have to install a few dependencies, such as zlib, zlib-dev,
+# cmake, etc.
 : $ bundle exec jekyll serve
 # serves at localhost:4000
