@@ -95,6 +95,28 @@ veja nosso [github](https://github.com/labFGV/DOliberto/issues/36).
 
 ## FAQ
 
+### O que é Diário Oficial?
+Os Diários Oficiais são jornais mantidos por governos para publicar todos os atos realizados pela administração pública, como as leis, os decretos, as nomeações e os editais de licitação. No Brasil, possuem Diário Oficial o Governo Federal, os Estados, os municípios e os órgãos do Poder Judiciário.
+
+
+### O que é o DOliberto?
+O DOliberto é uma plataforma gratuita em código aberto para a produção de Diários Oficiais transparentes e multiformatos.
+
+
+### Quem faz o DOliberto?
+[O DOliberto é um projeto do LABFGV](http://labfgv.com.br/diario-oficial-liberto/), entidade estudantil que busca soluções inovadoras para a melhoria da gestão pública do país.
+
+Nossa equipe principal é formada por estudantes de graduação e mestrado, em Matemática Aplicada e Direito, que fazem parte do LABFGV como membros ou fellows. No entanto, aceitamos contribuição externa!
+
+
+### Quanto custa utilizar o DOliberto?
+
+Nada! Todo o código do projeto é *open source* e, portanto, aberto para a comunidade. O custo é zero e há benefícios tanto para a [administração pública](/poder-publico.html#vantagens-do-doliberto) quanto para a [sociedade](/index.html#vantagens).
+
+### Posso adotar o DOli e continuar a imprimir o DO?
+
+Sim! O DOli gera uma versão em PDF do Diário Oficial pronta para impressão. Caso um município deseje extinguir a versão impressa de seu Diário Oficial e manter apenas a digital, pode ser [necessário realizar alterações normativas](/poder-publico.html#adoção).
+
 ### Qual a diferença entre o DOliberto e outros DOs digitais?
 - **Acesso aos dados**: no momento (Dezembro 2017), os sites dos
   Diários Oficiais da União, de São Paulo e do Rio de Janeiro não
@@ -118,3 +140,9 @@ veja nosso [github](https://github.com/labFGV/DOliberto/issues/36).
   código livre também permite a qualquer pessoa personalizar o
   DOliberto para os seus fins, e também contribuir melhorias para o
   sistema.
+
+
+### De que forma eu posso ajudar o projeto?
+
+Qualquer ajuda é bem vinda! Dependendo de suas habilidades, existem diferentes maneiras de contribuir: como cidadão, você pode sugerir para seus representantes políticos a adoção do DOli na sua cidade; se você é programador, [temos uma página especial para você](/dev.html). Se deseja contribuir de alguma forma (design, divulgação, documentação...), [entre em contato conosco](mailto:labfgv+doliberto@gmail.com). Ficaremos muito felizes com seu contato!
+
