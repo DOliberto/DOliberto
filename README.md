@@ -105,7 +105,7 @@ sudo docker stop doli-server
 
 ## Mantenedores
 
-@matheusouzap @fernandascovino @harllos @odanoburu at
+@souzamatheusp @fernandascovino @harllos @odanoburu at
 [@LABFGV](https://github.com/LABFGV).
 
 ## Contribua!
