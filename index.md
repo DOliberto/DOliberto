@@ -2,36 +2,38 @@
 ---
 
 O DOliberto é uma plataforma gratuita em código aberto para a produção
-de Diários Oficiais transparentes e multiformato.
+de Diários Oficiais transparentes e multiformatos.
 
 - TOC
 {:toc}
 
-# Um Diário Oficial verdadeiramente digital
-O poder público produz muito mais informação do que uma pessoa (ou
-mesmo um grupo!) pode acompanhar. Da tramitação de projetos nas
-câmaras legislativas às portarias das agências reguladoras, **diversas
-regras e atos são propostos sem a devida atenção**.
+## Um Diário Oficial verdadeiramente digital
+O poder público produz mais informações do que uma pessoa (ou mesmo um
+grupo!) pode acompanhar. Da tramitação de projetos nas câmaras
+legislativas às portarias das agências reguladoras, **diversas normas
+são propostas sem a plena participação popular**.
 
-O Diário Oficial, veículo através do qual o governo publica atos
-oficiais, tem um papel central na transparência da atividade
-pública. Porém, sem o uso de computadores para filtrar e analisar essa
-enorme quantidade de informação, acompanhar e fiscalizar as medidas
-governamentais é um exercício fadado ao fracasso.
-
-**Disponibilizar todo documento legal e governamental de maneira
-acessível a pessoas e computadores se torna assim fundamental para o
+O governo publica seus atos por meio dos Diários Oficiais, que tem,
+por isso, papel central na transparência da atividade
+pública. Acompanhar e fiscalizar a grande quantidade de informações
+presentes nos documentos é praticamente inviável sem o uso de
+computadores que filtrem e analisem esses dados. **Dessa forma,
+disponibilizar todo documento legal e governamental de maneira
+acessível a pessoas e a computadores torna-se fundamental para o
 processo democrático.**
 
-Nesse sentido, o projeto DOliberto busca tornar mais fácil o processo
-de produção de um Diário Oficial acessível e transparente.
+Nesse contexto, o projeto DOliberto almeja tornar mais fácil a criação
+de um Diário Oficial acessível e transparente.
 
 ## DOliberto: como funciona?
-O projeto se baseia na premissa de que muitos atos publicados em DOs
-são semelhantes a ponto de poderem ser escritos de maneira
+O projeto se baseia na premissa de que muitos tipos de atos publicados
+em <abbr title="Diários Oficiais">DOs</abbr> apresentam poucas
+variações, de modo que podem ser escritos de maneira mais
 automatizada.
 
-Tomemos como exemplo o [ato](http://www.imprensanacional.gov.br/materia/-/asset_publisher/2eV0Indlhjp7/content/id/699534) publicado no dia 1º de Dezembro de 2017:
+Tomemos como exemplo o
+[ato](http://www.imprensanacional.gov.br/materia/-/asset_publisher/2eV0Indlhjp7/content/id/699534)
+abaixo:
 
 
 >    O PRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o
@@ -55,23 +57,22 @@ Tomemos como exemplo o [ato](http://www.imprensanacional.gov.br/materia/-/asset_
 >
 >    Aloysio Nunes Ferreira Filho
 
-Seguem dois atos de mesmo teor, em que mudam apenas três variáveis: o
-nome da pessoa nomeada, o cargo em que ela ocupava, o novo cargo a ser
+Seguem duas nomeações de mesmo teor, em que há apenas três variáveis:
+a pessoa nomeada, o cargo que ela ocupava e o novo cargo a ser
 ocupado. Bastam essas informações para descrever completamente o texto
-dos atos em questão, o que nos permite produzir o texto a partir
-dessas três informações.
+dos atos em questão, o que nos permite produzí-lo texto a partir
+desses três dados.
 
-Na abordagem do DOliberto, uma interface gráfica simples pergunta a
-escritora do ato que tipo de notícia ela deseja redigir; com base
-nisso, perguntam-se justamente as variáveis do ato em questão, e o
+Na abordagem do DOliberto, uma interface gráfica simples pergunta à
+escritora o tipo de notícia que ela deseja redigir; com base na
+resposta, pergunta-se em seguida as variáveis do ato em questão e o
 texto é produzido automaticamente a partir desses dados, em um
 processo denominado em inglês por *document automation*.
 
-**Naturalmente, nem todo ato se presta a esse tipo de automação**. A
-maior parte das leis, por exemplo, não se encaixa nessa estrutura, e
-nesses casos o DOliberto apenas oferece um campo livre de escrita,
-automatizando somente as partes mais básicas do ato, como a data,
-título, e informações do autor.
+**Naturalmente, nem todo ato presta-se a esse tipo de automação**. No
+caso caso das leis, por exemplo, o DOliberto apenas oferece um campo
+livre de escrita, automatizando somente as partes mais básicas do ato,
+como a data, título e as informações do autor.
 
 ## Vantagens
 - **correção**: Redução de erros nas publicações;
@@ -81,36 +82,39 @@ título, e informações do autor.
   eficientes, sistemas de alertas;
 - **multiformato**: um formato pra cada atividade: leitura *online*
   (HTML), leitura *offline* (PDF), análise (XML, JSON).
+- **conectado**: Versionar e interligar as publicações que modifiquem
+  outras.
 
 ## Status
-O DOliberto atualmente está na versão `0.0.1`, em pleno
-desenvolvimento. A imagem abaixo resume que etapas já estão
-implementadas, e quais ainda estão para serem desenvolvidas. Para mais
-detalhes, entre em contato conosco, ou veja nosso
-[github](https://github.com/labFGV/DOliberto/issues/36).
+O DOliberto, em desenvolvimento, está na versão `0.0.1`. O esquema
+abaixo resume as etapas já implementadas e quais ainda estão para
+serem desenvolvidas. Para mais detalhes, entre em contato conosco, ou
+veja nosso [github](https://github.com/labFGV/DOliberto/issues/36).
 
 ![ROADMAP DOliberto](/images/esquema_doli.png)
 
 ## FAQ
 
 ### Qual a diferença entre o DOliberto e outros DOs digitais?
-- **Acesso aos dados**: No momento (Dezembro 2017), nenhum site
-  permite o baixar os dados de todas as publicações em um arquivo só,
-  permitindo ao usuário fazer com os dados o que bem desejar, como por
-  exemplo criar um sistema próprio de busca.
+- **Acesso aos dados**: no momento (Dezembro 2017), os sites dos
+  Diários Oficiais da União, de São Paulo e do Rio de Janeiro não
+  permitem baixar os dados de todas as publicações como um todo,
+  impedindo o usuário de fazer com os dados o que desejar, como criar
+  seu próprio sistema de busca.
 
-- **Dados estruturados**: Além disso, formatos como PDF e HTML são
-  informação desestuturada. Em formatos como JSON e XML, podemos
-  registrar que uma notícia é de uma certa secretaria ou que um valor
-  em reais representa o valor total de uma licitação de um modo que um
-  computador pode compreender, o que não é possível em PDF e
-  complicado em HTML. Isso impede a análise dos textos em larga
-  escala, dificultando a transparência.
+- **Dados estruturados**: os formatos JSON e XML (usados pelo
+  DOliberto) podem registrar que uma notícia é de determinada
+  secretaria ou que um valor em reais representa o total de uma
+  licitação de maneira compreensível para um computador. Esses
+  procedimentos não são possíveis em PDF e são complicados em HTML,
+  porque esses formatos (usados pelos DOs brasileiros) representam
+  informação de modo desestruturado. A representação desestruturada
+  dificulta a análise dos textos em larga escala, prejudicando a
+  transparência governamental.
 
 - **Código aberto**: o DOliberto é uma iniciativa de código aberto, de
   modo que qualquer prefeitura do país (e não só as mais ricas) pode
-  implantar um sistema moderno de Diário Oficial com custos
-  baixíssimos (basicamente a manutenção do servidor do sistema). O
+  implantar um sistema moderno de Diário Oficial com custo zero. O
   código livre também permite a qualquer pessoa personalizar o
   DOliberto para os seus fins, e também contribuir melhorias para o
   sistema.
