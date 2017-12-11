@@ -38,9 +38,9 @@ série de vantagens para a administração pública:**
 ## Adoção
 
 **Em regra, um município pode adotar o DOliberto sem alterações
-legislativas.** Caso haja interesse em abandonar a versão impressa, há
-um [modelo de decreto]() disponível para publicação exclusivamente
-online do Diário Oficial.
+legislativas.** Caso haja interesse em abandonar a versão impressa,
+entre em contato conosco. <!--há um [modelo de decreto]() disponível
+para publicação exclusivamente online do Diário Oficial.-->
 
 Em caso de dúvidas, não deixe de consultar nosso
 [FAQ](https://labfgv.github.io/DOliberto/#faq) ou de [entrar em

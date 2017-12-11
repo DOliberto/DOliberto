@@ -89,7 +89,7 @@ como a data, título e as informações do autor.
 O DOliberto, em desenvolvimento, está na versão `0.0.1`. O esquema
 abaixo resume as etapas já implementadas e quais ainda estão para
 serem desenvolvidas. Para mais detalhes, entre em contato conosco, ou
-veja nosso [github](https://github.com/labFGV/DOliberto/issues/36).
+veja nosso [GitHub](https://github.com/labFGV/DOliberto/issues/36).
 
 ![ROADMAP DOliberto](/images/esquema_doli.png)
 
