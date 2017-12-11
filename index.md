@@ -91,7 +91,7 @@ abaixo resume as etapas já implementadas e quais ainda estão para
 serem desenvolvidas. Para mais detalhes, entre em contato conosco, ou
 veja nosso [GitHub](https://github.com/labFGV/DOliberto/issues/36).
 
-![ROADMAP DOliberto](/images/esquema_doli.png)
+![ROADMAP DOliberto](./images/esquema_doli.png)
 
 ## FAQ
 
@@ -102,15 +102,13 @@ decretos, as nomeações e os editais de licitação. No Brasil, possuem
 Diário Oficial o Governo Federal, os Estados, os municípios e os
 órgãos do Poder Judiciário.
 
-
 ### O que é o DOliberto?
 O DOliberto é uma plataforma gratuita em código aberto para a produção
 de Diários Oficiais transparentes e multiformatos.
 
-
 ### Quem faz o DOliberto?
-[O DOliberto é um projeto do
-LABFGV](http://labfgv.com.br/diario-oficial-liberto/), entidade
+O DOliberto é um projeto do
+[LABFGV](http://labfgv.com.br/diario-oficial-liberto/), entidade
 estudantil que busca soluções inovadoras para a melhoria da gestão
 pública do país.
 
@@ -123,15 +121,15 @@ como membros ou fellows. No entanto, aceitamos contribuições externas!
 
 Nada! Todo o código do projeto é *open source* e, portanto, aberto
 para a comunidade. O custo é zero e há benefícios tanto para a
-[administração pública](/poder-publico.html#vantagens-do-doliberto)
-quanto para a [sociedade](/index.html#vantagens).
+[administração pública](./poder-publico.html#vantagens-do-doliberto)
+quanto para a [sociedade](./#vantagens).
 
 ### Posso adotar o DOli e continuar a imprimir o DO?
 
 Sim! O DOli gera uma versão em PDF do Diário Oficial pronta para
 impressão. Caso um município deseje extinguir a versão impressa de seu
 Diário Oficial e manter apenas a digital, pode ser necessário realizar
-[alterações normativas](/poder-publico.html#adoção).
+[alterações normativas](./poder-publico.html#adoção).
 
 ### Qual a diferença entre o DOliberto e outros DOs digitais?
 - **Acesso aos dados**: no momento (Dezembro 2017), os sites dos
@@ -163,7 +161,7 @@ Diário Oficial e manter apenas a digital, pode ser necessário realizar
 Qualquer ajuda é bem vinda! Dependendo de suas habilidades, existem
 diferentes maneiras de contribuir: como cidadão, você pode sugerir
 para seus representantes políticos a adoção do DOli na sua cidade; se
-você é programador, temos uma [página especial](/dev.html) para
+você é programador, temos uma [página especial](./dev.html) para
 você. Se deseja contribuir de alguma forma (design, divulgação,
 documentação...), entre em
 [contato](mailto:labfgv+doliberto@gmail.com) conosco. Ficaremos muito
