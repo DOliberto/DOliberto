@@ -1,5 +1,12 @@
 ---
 ---
+# DOliberto demo
+
+Se você quiser testar o DOliberto no seu próprio computador, você
+precisa instalá-lo. As instruções estão
+[aqui](https://github.com/labfgv/doliberto#instala%C3%A7%C3%A3o-e-uso),
+mas você vai precisar usar um terminal/linha de comando.
+
 <video controls width="400" height="400"
        poster="demo.png" muted>
   <source src="demo.mp4" type="video/mp4">
