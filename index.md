@@ -91,7 +91,7 @@ abaixo resume as etapas já implementadas e quais ainda estão para
 serem desenvolvidas. Para mais detalhes, entre em contato conosco, ou
 veja nosso [GitHub](https://github.com/labFGV/DOliberto/issues/36).
 
-![ROADMAP DOliberto](./images/esquema_doli.png)
+<img src="./images/esquema_doli.png" data-action="zoom" alt="ROADMAP DOliberto">
 
 ## FAQ
 
