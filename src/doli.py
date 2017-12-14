@@ -171,7 +171,7 @@ def read_json_and_make_doli(json_path, only_tex=None):
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="This utility is part of the DOliberto project (see github.com/labfgv/doliberto.")
+    parser = argparse.ArgumentParser(description="This utility is part of the DOliberto project (see github.com/DOliberto/DOliberto.")
     subparsers = parser.add_subparsers(title="subcommands", help="sub-command help")
     # make
     description_help = "turns a .json document in the appropriate format into a .pdf or .tex file."
