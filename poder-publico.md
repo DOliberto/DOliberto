@@ -39,9 +39,9 @@ série de vantagens para a administração pública:**
 
 **Em regra, um município pode adotar o DOliberto sem alterações
 legislativas.** Caso haja interesse em abandonar a versão impressa,
-entre em contato conosco. <!--há um [modelo de decreto]() disponível
-para publicação exclusivamente online do Diário Oficial.-->
-
-Em caso de dúvidas, não deixe de consultar nosso
-[FAQ](https://labfgv.github.io/DOliberto/#faq) ou de [entrar em
-contato](mailto:labfgv+doliberto@gmail.com) com o LABFGV.
+podem ser necessárias alterações normativas a depender da situação
+jurídica de cada município. <!--Para tais casos, separamos alguns
+modelos de decreto e projeto de lei para auxiliar o gestor
+pũblico.--> Em caso de dúvidas sobre questões legislativas, não
+hesite em [entrar em contato
+conosco!](mailto:labfgv+doliberto@gmail.com).
