@@ -1,4 +1,4 @@
-# [DOliberto](https://labfgv.github.io/DOliberto) <img src="https://github.com/labFGV/DOliberto/blob/gh-pages/images/logo-doli.jpeg" width="250" align="right"/>
+# [DOliberto](https://doliberto.github.io/) <img src="https://github.com/DOliberto/DOliberto.github.io/blob/master/images/logo-doli.jpeg" width="250" align="right"/>
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
@@ -7,7 +7,7 @@
 O DOliberto é uma plataforma gratuita em código aberto para a produção
 de Diários Oficiais digitais e transparentes.
 
-O repositório em https://github.com/labfgv/doliberto/ contém:
+O repositório em https://github.com/DOliberto/DOliberto contém:
 
 1. [python back-end](src/doli.py): transforma o JSON vindo da
    interface gráfica nos formatos exportados (PDF [✓], HTML [ ])
@@ -81,7 +81,7 @@ aqui](https://docs.docker.com/engine/installation/).
 
 Agora é só clonar o repositório:
 ```sh
-git clone https://github.com/labFGV/DOliberto.git
+git clone https://github.com/DOliberto/DOliberto.git
 ```
 
 No diretório do projeto, construir a imagem Docker:
@@ -105,15 +105,14 @@ sudo docker stop doli-server
 
 ## Mantenedores
 
-@souzamatheusp @fernandascovino @harllos @odanoburu at
-[@LABFGV](https://github.com/LABFGV).
+@souzamatheusp @fernandascovino @harllos @odanoburu
 
 ## Contribua!
 
 O DOliberto é um projeto de software livre, e contribuições são
 bem-vindas! [Abra uma
-*issue*](https://github.com/labfgv/DOliberto/issues/new) se achar algo
-errado, ou então proponha uma solução para uma das *issues* já
+*issue*](https://github.com/DOliberto/DOliberto/issues/new) se achar
+algo errado, ou então proponha uma solução para uma das *issues* já
 abertas!
 
 Se você tiver uma nova ideia ou quiser conversar, fale com a gente!
@@ -122,4 +121,4 @@ Você pode abrir uma *issue* ou nos mandar um
 
 ## Licença
 
-[LGPL 3.0](LICENSE) © LABFGV e contribuidores
+[LGPL 3.0](LICENSE) © AUTHORS e CONTRIBUTORS
