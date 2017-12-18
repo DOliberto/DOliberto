@@ -14,11 +14,14 @@
         <title>DOliberto</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
         <script src="js/config.js" type="text/javascript"></script>
         <script src="js/run.js" type="text/javascript"></script>
         <script src="js/Sortable.min.js" type="text/javascript"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
     </head>
     <body onclick="dropInput.globalClick(event)">
 
@@ -28,6 +31,7 @@
         <div id="sidePanel">
             <div class="action" onclick="sendJson()">&#10003;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gerar DO</div>
             <div class="action" onclick="newAto()">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Novo ato</div>
+            <div class="action" id="upCSV">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir CSV</div>
             <br/>
             <div id="atosHolder" class="atosHolder"></div>
         </div>
@@ -43,6 +47,13 @@
             <form id="mainForm" onsubmit="gather(this)">
             </form>
             <div id="json"></div>
+        </div>
+        <div id="csvDialog" class="mfp-hide">
+            <h2 id="csvH2">Inserir arquivo CSV</h2>
+            <div id="drop">
+                <button><label style="font-size: medium;" for="csv">Clique ou arraste arquivos aqui</label></button>
+                <input id="csv" type="file" hidden/>
+            </div>
         </div>
     </body>
 </html>

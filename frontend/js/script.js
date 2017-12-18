@@ -1,3 +1,54 @@
+$(
+    function(){
+        var drop = document.getElementById("drop");
+        drop.addEventListener("dragenter", dragenter, false);
+        drop.addEventListener("dragleave", dragleave, false);
+        drop.addEventListener("dragover", dragover, false);
+        drop.addEventListener("drop", ondrop, false);
+        function dragenter(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.target.classList.add('over');
+        }
+
+        function dragleave(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.target.classList.remove('over');
+        }
+
+        function dragover(e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        function ondrop(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.target.classList.remove('over');
+
+            var dt = e.dataTransfer;
+            var files = dt.files;
+
+            console.log(files.length);
+
+            var reader = new FileReader();
+            reader.onload = function(e){csv = e.target.result};
+            reader.readAsText(files[0]);
+
+            $.magnificPopup.close();
+            //handleFiles(files);
+        }
+        $('#upCSV').magnificPopup({
+            items: {
+                src: "#csvDialog",
+                type: 'inline',
+                closeBtnInside: true
+            }
+        })
+    }
+);
+
+
 $.fn.serializeObject = function() {
    o = {};
    a = this.serializeArray();
@@ -16,6 +67,7 @@ $.fn.serializeObject = function() {
 
 atosL = 0;
 atos = {atos: []};
+var csv = null;
 
 function gather(a){
     event.preventDefault();
@@ -24,6 +76,8 @@ function gather(a){
         return false;
     }
     json.text = json.text.replace(/\r\n/g, "\n");
+    json.csv = csv;
+    csv = null;
     ref = (!editing)? atosL++ : eIndex;
     atos.atos[ref] = json;
     updateAto(ref);
@@ -88,6 +142,10 @@ function atoClick(el){
 function newAto() {
     $('form').empty();
     createForm();
+}
+
+function expectCSV() {
+
 }
 
 serverURL = "http://localhost:8888"; //"http://104.197.105.228:8888"; 

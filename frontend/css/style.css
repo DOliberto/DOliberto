@@ -226,3 +226,25 @@ input[type=submit] {
     cursor: pointer;
     transition: 0.1s ease-in-out;
 }
+
+#csvDialog {
+    background: #fff;
+    margin: -200px auto auto auto;
+    position: relative;
+    padding: 5px 30px 30px 30px;
+    width: 700px;
+    border-radius: 5px;
+}
+
+#drop {
+    border: 2px dashed #bbb;
+    background: #fff;;
+    padding: 20px;
+}
+#drop.over {
+    border-color: #888;
+}
+
+#csvH2 {
+    font-family: "Barlow", sans-serif;
+}
