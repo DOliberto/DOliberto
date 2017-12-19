@@ -52,7 +52,7 @@ config = {
             "Baleia 3",
             "Abobora 4",
             "Teste 5",
-            "Teste 6",
+            "Teste 6"
         ]
     },
 
@@ -76,7 +76,7 @@ config = {
         drop: {
             fixed: [
                 ["element", "div"],
-                ["class", "drop"],
+                ["class", "drop"]
             ],
             dynamic: [
                 ["id", "drop_", "elementId"]

@@ -22,6 +22,7 @@
         <script src="js/run.js" type="text/javascript"></script>
         <script src="js/Sortable.min.js" type="text/javascript"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/UI.js" type="text/javascript"></script>
     </head>
     <body onclick="dropInput.globalClick(event)">
 
@@ -30,21 +31,21 @@
         </div>
         <div id="sidePanel">
             <div class="action" onclick="sendJson()">&#10003;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gerar DO</div>
-            <div class="action" onclick="newAto()">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Novo ato</div>
+            <div class="action" onclick="UI.newAto()">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Novo ato</div>
             <div class="action" id="upCSV">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir CSV</div>
             <br/>
             <div id="atosHolder" class="atosHolder"></div>
         </div>
         <div id="container">
             <div id="landing">
-                <form onsubmit="doneLanding(this)">
+                <form onsubmit="doneLanding()">
                     <input type="number" min="0" step="1" id="lIssue" placeholder="Número"><br/><br/>
-                    <label style="font-size:17.5px; margin-right:10px;">Data do DO:</label>
+                    <label for="lDate" style="font-size:17.5px; margin-right:10px;">Data do DO:</label>
                     <input type="date" id="lDate"/><br/><br/>
                     <input type="submit" value="Continuar"/>
                 </form>
             </div>
-            <form id="mainForm" onsubmit="gather(this)">
+            <form id="mainForm" onsubmit="updateJSON()">
             </form>
             <div id="json"></div>
         </div>
