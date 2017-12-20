@@ -9,9 +9,9 @@ HOW-TO
 requirements:
   - Docker (https://www.docker.com/community-edition)
 to run server:
-  - clone repository at https://github.com/labfgv/DOliberto
-  - comment the line that calls gcloud_save_file if you're not
-    authenticated
+  - clone repository at https://github.com/DOliberto/DOliberto
+  - uncomment the line that calls gcloud_save_file if you're authenticated to
+    gcloud
   - in script.js, change serverURL to localhost
   - follow instructions in Dockerfile to build and run image
   - point your browser to the port you selected and do your thing
