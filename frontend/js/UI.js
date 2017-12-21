@@ -27,7 +27,7 @@ var UI = {
             var files = dt.files;
 
             var reader = new FileReader();
-            reader.onload = function(e){csv = e.target.result};
+            reader.onload = function(e){DO.csv = e.target.result};
             reader.readAsText(files[0]);
 
             $.magnificPopup.close();
@@ -76,6 +76,36 @@ var UI = {
         mainForm.append(el4);
     },
 
+    updateSidebarList: function (ref) {
+        var ato = (!UI.editing) ? document.createElement("div") : $('#atoL' + DO.eIndex)[0];
+        if (!UI.editing) {
+            ato.setAttribute("class","atosList");
+            ato.setAttribute("id","atoL" + ref);
+            ato.setAttribute("data-in", ref);
+            ato.setAttribute("onclick","UI.atoClick(this)");
+            ato.setAttribute("ondragstart", "handledrag(event)");
+            ato.setAttribute("ondragend", "handledrag2(event)");
+        }
+        ato.innerText = DO.atos.atos[ref].title;
+        if (!UI.editing) {
+            $("#atosHolder")[0].append(ato);
+        } else {
+            UI.editing = false;
+            DO.eIndex = null;
+        }
+    },
+
+    // noinspection JSUnusedGlobalSymbols
+    atoClick: function (el) {
+        DO.ref = parseInt(el.getAttribute("data-in"));
+        for (var f in DO.atos.atos[DO.ref]) {
+            if (f === 'date') continue;
+            $("#" + f)[0].value = DO.atos.atos[DO.ref][f];
+        }
+        UI.editing = true;
+        DO.eIndex = DO.ref;
+    },
+
     makeSortable: function () {
         Sortable.create($('#atosHolder')[0], {
             onStart: function(evt){
@@ -86,7 +116,7 @@ var UI = {
             },
             onUpdate: function(evt){
                 console.log(evt);
-                for(var i=0;i<atosL;i++){
+                for(var i=0;i<DO.atosL;i++){
                     //console.log($('.atosList')[i].getAttribute('data-in'))
                     continue
                 }
@@ -94,8 +124,8 @@ var UI = {
                 return;
                 var o = evt.oldIndex;
                 var n = evt.newIndex;
-                atos.atos.splice(n,0, atos.atos[o]);
-                atos.atos.splice(o,1);
+                DO.atos.atos.splice(n,0, DO.atos.atos[o]);
+                DO.atos.atos.splice(o,1);
                 var l = Math.min(o, n);
                 var h = Math.max(o, n);
                 var d;
@@ -118,6 +148,19 @@ var UI = {
                 }
             }
         })
+    },
+
+    handledrag: function (e) {
+        var img = new Image();
+        img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+        e.dataTransfer.setDragImage(img,0,0);
+        e.srcElement.classList.add('dragging');
+        e.srcElement.classList.remove('atosList');
+    },
+
+    handledrag2: function (e) {
+        e.srcElement.classList.remove('dragging');
+        e.srcElement.classList.add('atosList');
     }
 };
 
