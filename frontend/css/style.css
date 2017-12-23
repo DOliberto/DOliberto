@@ -248,3 +248,12 @@ input[type=submit] {
 #csvH2 {
     font-family: "Barlow", sans-serif;
 }
+
+#cont {
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    padding: 10px 60px;
+    background: white;
+    border-radius: 3px;
+}

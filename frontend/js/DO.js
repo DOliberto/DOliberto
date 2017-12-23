@@ -38,11 +38,18 @@ DO = {
     showPDF: function (blob) {
         var data = new Blob([blob], {type: "application/pdf"});
         var url = window.URL.createObjectURL(data);
-        var link = document.createElement('a');
-        link.href = url;
-        link.target = "_blank";
-        link.rel="noopener noreferrer";
-        link.click();
+        var iframe = document.createElement('object');
+        iframe.data = url;
+        iframe.type = "application/pdf";
+        iframe.width = "900px";
+        iframe.height = window.innerHeight - 60 + "px";
+        $.magnificPopup.open({items:{src:"<div id='cont'/>",type:'inline'}})
+        $("#cont")[0].appendChild(iframe);
+        //var link = document.createElement('a');
+        //link.href = url;
+        //link.target = "_blank";
+        //link.rel="noopener noreferrer";
+        //link.click();
 
         setTimeout(function(){
             window.URL.revokeObjectURL(data);
