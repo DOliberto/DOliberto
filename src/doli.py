@@ -96,6 +96,7 @@ def make_preamble(dolidoc, issue, date):
     dolidoc.preamble.append(Command("currentmonth", date.month))
     dolidoc.preamble.append(Command("currentday", date.day))
     dolidoc.preamble.append(Command("titleformat", options='block', arguments=Command("section"), extra_arguments=Arguments(NoEscape(r"\large\bfseries\filcenter"), Command("thesection"), Command("1em"), Command("MakeUppercase"))))
+    dolidoc.preamble.append(Command('title', 'Diário Oficial (preview)')) 
     return dolidoc
 #
 ## document

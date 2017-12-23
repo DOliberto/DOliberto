@@ -25,7 +25,7 @@
 \RequirePackage{titlesec} %
 \RequirePackage{titletoc}
 \RequirePackage{geometry}
-\RequirePackage[citecolor=black,pagebackref,breaklinks=true,plainpages=false]{hyperref} % to make links
+\RequirePackage[citecolor=black,pagebackref,breaklinks=true,plainpages=false,pdfusetitle]{hyperref} % to make links
 % \RequirePackage[skins]{tcolorbox}
 
 
